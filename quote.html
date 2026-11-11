@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Free Quote & Proposal | LocalLift</title>
+  <meta name="description" content="Request your free website and local marketing consultation. Get a customized growth proposal within 24 hours.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              950: '#052e16',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- ==========================================
+       TOP ANNOUNCEMENT BAR
+       ========================================== -->
+  <div class="bg-brand-900 text-brand-100 text-xs py-2 px-4 border-b border-brand-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="inline-flex items-center justify-center bg-brand-500 text-brand-950 font-black rounded-full px-2 py-0.5 text-[10px] uppercase">Fast Turnaround</span>
+        <span>⚡ Receive your custom roadmap & proposal in less than 24 hours.</span>
+      </div>
+      <div class="flex items-center gap-4 text-brand-200">
+        <span class="hidden md:inline">Prefer to talk right now? <a href="tel:6412952311" class="text-white hover:underline font-semibold">(641) 295-2311</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       NAVIGATION
+       ========================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white shadow-md shadow-brand-700/20 group-hover:bg-brand-600 transition">
+          <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center">
+            <span class="font-extrabold text-2xl tracking-tight text-slate-900">Local<span class="text-brand-600">Lift</span></span>
+          </div>
+          <span class="text-[10px] tracking-widest text-slate-500 font-semibold uppercase -mt-1">Websites • Marketing • More Customers</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="index.html" class="hover:text-brand-700 transition">Home</a>
+        <a href="services.html" class="hover:text-brand-700 transition">Services</a>
+        <a href="portfolio.html" class="hover:text-brand-700 transition">Sample Websites</a>
+        <a href="pricing.html" class="hover:text-brand-700 transition">Pricing & Packages</a>
+        <a href="index.html#how-it-works" class="hover:text-brand-700 transition">How It Works</a>
+        <a href="index.html#roi-calculator" class="hover:text-brand-700 transition">ROI Calculator</a>
+      </nav>
+
+      <!-- Phone Support -->
+      <div class="hidden sm:flex items-center gap-2 text-xs font-bold text-slate-700">
+        <i data-lucide="phone-call" class="w-4 h-4 text-brand-700"></i>
+        <a href="tel:6412952311" class="hover:text-brand-700 transition">(641) 295-2311</a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="index.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Home</a>
+      <a href="services.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Services</a>
+      <a href="portfolio.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Sample Websites</a>
+      <a href="pricing.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Pricing</a>
+      <a href="quote.html" class="block font-bold text-brand-700 py-1">Get Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO
+       ========================================== -->
+  <section class="bg-gradient-hero py-12 border-b border-slate-200 text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="text-brand-700 text-xs font-bold tracking-widest uppercase bg-brand-100 px-3 py-1 rounded-full">
+        Step 1 of Growing Your Business
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+        Get Your Free <span class="text-gradient-green">Website & Growth Proposal</span>
+      </h1>
+      <p class="text-slate-600 text-sm sm:text-base mt-2">
+        Fill out this simple 2-minute questionnaire. We will inspect your local market and deliver an exact proposal tailored to your trade.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       MAIN FORM & PROPOSAL BUILDER
+       ========================================== -->
+  <main class="py-12 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left Column: Form -->
+        <div class="lg:col-span-8 bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm">
+          
+          <form id="quoteForm" class="space-y-8" action="https://formspree.io/f/xwlokqke" method="POST">
+            
+            <!-- Section 1: Business Profile -->
+            <div>
+              <div class="flex items-center gap-2 border-b pb-3 mb-5">
+                <span class="w-6 h-6 rounded-full bg-brand-700 text-white text-xs font-bold flex items-center justify-center">1</span>
+                <h3 class="text-base font-bold text-slate-900">Your Business Details</h3>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Business Name *</label>
+                  <input type="text" id="quote_business_name" name="business_name" required placeholder="e.g. Apex Detailing, Oak Creek Landscaping" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:bg-white transition">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Owner / Contact Name *</label>
+                  <input type="text" id="quote_owner_name" name="owner_name" required placeholder="e.g. Sarah Miller" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:bg-white transition">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Email Address *</label>
+                  <input type="email" id="quote_email" name="email" required placeholder="sarah@example.com" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:bg-white transition">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone Number (Optional)</label>
+                  <input type="tel" id="quote_phone" name="phone" placeholder="(555) 000-0000" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:bg-white transition">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Type of Business *</label>
+                  <select id="quote_business_type" name="business_type" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:bg-white transition">
+                    <option value="Lawn care and landscaping">Lawn care and landscaping</option>
+                    <option value="Mobile car detailing">Mobile car detailing</option>
+                    <option value="Cleaning business">Cleaning business</option>
+                    <option value="Small construction & handyman">Small construction & handyman</option>
+                    <option value="Small restaurant & coffee shop">Small restaurant & coffee shop</option>
+                    <option value="Independent repair business">Independent repair business</option>
+                    <option value="Plumbing / Electrical / HVAC">Plumbing / Electrical / HVAC</option>
+                    <option value="Other local service">Other local service business</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Current Website URL (If Any)</label>
+                  <input type="text" id="quote_website" name="current_website" placeholder="e.g. facebook.com/mybiz or None" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:bg-white transition">
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 2: Services Needed -->
+            <div>
+              <div class="flex items-center gap-2 border-b pb-3 mb-5">
+                <span class="w-6 h-6 rounded-full bg-brand-700 text-white text-xs font-bold flex items-center justify-center">2</span>
+                <h3 class="text-base font-bold text-slate-900">Services You Are Interested In</h3>
+              </div>
+
+              <p class="text-xs text-slate-500 mb-4">Select all services you'd like included in your custom proposal:</p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-700">
+                <label class="flex items-start gap-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-brand-500 transition">
+                  <input type="checkbox" name="services" value="Website Development" checked class="accent-brand-600 w-4 h-4 mt-0.5">
+                  <div>
+                    <span class="block font-bold text-slate-900">Website Development</span>
+                    <span class="text-[11px] text-slate-500 font-normal">Custom mobile-friendly design, services page, estimate buttons</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-brand-500 transition">
+                  <input type="checkbox" name="services" value="AI Marketing" checked class="accent-brand-600 w-4 h-4 mt-0.5">
+                  <div>
+                    <span class="block font-bold text-slate-900">AI Marketing & Social</span>
+                    <span class="text-[11px] text-slate-500 font-normal">Facebook & Instagram posts, promotional graphics, calendars</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-brand-500 transition">
+                  <input type="checkbox" name="services" value="Customer Management" class="accent-brand-600 w-4 h-4 mt-0.5">
+                  <div>
+                    <span class="block font-bold text-slate-900">Customer Management</span>
+                    <span class="text-[11px] text-slate-500 font-normal">Organize inquiries, estimate tracking, automated follow-ups</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-brand-500 transition">
+                  <input type="checkbox" name="services" value="Online Reputation" class="accent-brand-600 w-4 h-4 mt-0.5">
+                  <div>
+                    <span class="block font-bold text-slate-900">Online Reputation & Reviews</span>
+                    <span class="text-[11px] text-slate-500 font-normal">Google Business Profile setup, review campaigns, map ranking</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:border-brand-500 transition sm:col-span-2">
+                  <input type="checkbox" name="services" value="Website Maintenance" class="accent-brand-600 w-4 h-4 mt-0.5">
+                  <div>
+                    <span class="block font-bold text-slate-900">Monthly Website Maintenance ($49/mo)</span>
+                    <span class="text-[11px] text-slate-500 font-normal">Daily backups, photo updates, pricing edits, and technical peace of mind</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Section 3: Budget Range -->
+            <div>
+              <div class="flex items-center gap-2 border-b pb-3 mb-5">
+                <span class="w-6 h-6 rounded-full bg-brand-700 text-white text-xs font-bold flex items-center justify-center">3</span>
+                <h3 class="text-base font-bold text-slate-900">Target Budget Range</h3>
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                <label class="border border-slate-300 rounded-xl p-3.5 text-center cursor-pointer bg-slate-50 hover:border-brand-600 transition">
+                  <input type="radio" name="budget" value="Starter ($399 - $500)" checked class="hidden peer">
+                  <span class="block font-bold peer-checked:text-brand-700">Under $500</span>
+                  <span class="text-[10px] text-slate-500 block mt-0.5">Starter Package</span>
+                </label>
+
+                <label class="border-2 border-brand-500 rounded-xl p-3.5 text-center cursor-pointer bg-white transition shadow-sm">
+                  <input type="radio" name="budget" value="Growth ($500 - $800)" checked class="hidden peer">
+                  <span class="block font-bold text-brand-800">★ $500 – $800</span>
+                  <span class="text-[10px] text-brand-700 block mt-0.5">Most Popular</span>
+                </label>
+
+                <label class="border border-slate-300 rounded-xl p-3.5 text-center cursor-pointer bg-slate-50 hover:border-brand-600 transition">
+                  <input type="radio" name="budget" value="Pro ($800 - $1,500)" class="hidden peer">
+                  <span class="block font-bold peer-checked:text-brand-700">$800 – $1,500</span>
+                  <span class="text-[10px] text-slate-500 block mt-0.5">Full-Service Engine</span>
+                </label>
+
+                <label class="border border-slate-300 rounded-xl p-3.5 text-center cursor-pointer bg-slate-50 hover:border-brand-600 transition">
+                  <input type="radio" name="budget" value="Custom ($1,500+)" class="hidden peer">
+                  <span class="block font-bold peer-checked:text-brand-700">$1,500+</span>
+                  <span class="text-[10px] text-slate-500 block mt-0.5">Multi-Location</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Section 4: What They Want to Improve -->
+            <div>
+              <div class="flex items-center gap-2 border-b pb-3 mb-5">
+                <span class="w-6 h-6 rounded-full bg-brand-700 text-white text-xs font-bold flex items-center justify-center">4</span>
+                <h3 class="text-base font-bold text-slate-900">What Do You Want to Improve?</h3>
+              </div>
+
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Describe Your Primary Challenges or Goals</label>
+              <textarea name="goals" rows="4" placeholder="e.g. 'I currently only get jobs when I post on Facebook groups. I want a professional website where people can request estimates directly. I also need to rank on Google Maps so local neighbors find me when searching for landscaping.'" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:bg-white transition"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div>
+              <button type="submit" class="w-full bg-brand-700 hover:bg-brand-800 text-white font-extrabold text-base py-4 rounded-xl shadow-lg shadow-brand-700/25 transition">
+                Submit & Generate My Custom Proposal &rarr;
+              </button>
+              <div class="flex items-center justify-center gap-3 text-slate-500 text-xs mt-3">
+                <span class="flex items-center gap-1"><i data-lucide="lock" class="w-3.5 h-3.5"></i> Strict Privacy</span>
+                <span>•</span>
+                <span>Zero Sales Pressure</span>
+                <span>•</span>
+                <span>24-Hour Response</span>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+
+        <!-- Right Column: Live Recommendation Summary & Proof -->
+        <div class="lg:col-span-4 space-y-6">
+          
+          <!-- Live Recommendation Card -->
+          <div class="bg-gradient-brand text-white rounded-3xl p-6 shadow-xl space-y-4">
+            <span class="text-[10px] font-black uppercase tracking-widest bg-brand-500/30 text-brand-200 px-3 py-1 rounded-full">
+              Live Estimator
+            </span>
+
+            <h4 class="text-xl font-bold">Recommended Solution</h4>
+            
+            <div class="bg-white/10 rounded-2xl p-4 border border-white/20 space-y-2">
+              <div class="text-xs text-brand-200">Recommended Package:</div>
+              <div id="calcRecommendedTier" class="text-xl font-black text-white">Business Growth</div>
+              <div class="text-xs text-brand-200 pt-1">Estimated Setup Investment:</div>
+              <div id="calcEstimatedPrice" class="text-3xl font-black text-brand-300">$599</div>
+              <div class="text-[11px] text-brand-100 pt-1">Typical Turnaround: <strong id="calcEstimatedTimeline">7-10 Business Days</strong></div>
+            </div>
+
+            <ul class="text-xs space-y-2 text-brand-100">
+              <li class="flex items-center gap-2">✓ No monthly mandatory contract</li>
+              <li class="flex items-center gap-2">✓ You own 100% of your code</li>
+              <li class="flex items-center gap-2">✓ 100% Satisfaction guarantee</li>
+            </ul>
+          </div>
+
+          <!-- Why LocalLift -->
+          <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-4">
+            <h4 class="font-bold text-sm text-slate-900">Why Local Businesses Choose LocalLift:</h4>
+            
+            <div class="space-y-3 text-xs text-slate-600">
+              <div class="flex items-start gap-2.5">
+                <div class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                </div>
+                <span><strong>No agency fluff:</strong> We speak plain English, build practical tools, and don't charge $3,000.</span>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <div class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                </div>
+                <span><strong>Speed matters:</strong> Your site is ready for clients in 5 to 10 days, not 3 months.</span>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <div class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                </div>
+                <span><strong>Built to get calls:</strong> Every button, headline, and form is placed to get you paid jobs.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Owner Guarantee Badge -->
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 text-center">
+            <div class="text-2xl mb-1">🤝</div>
+            <h5 class="font-bold text-xs text-amber-950">100% Satisfaction Guarantee</h5>
+            <p class="text-[11px] text-amber-900 mt-1">
+              You review and approve every page before the final balance is due. If you aren't thrilled, we keep revising until you are.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="bg-slate-950 text-slate-400 py-10 text-xs border-t border-slate-800 text-center">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>&copy; 2026 LocalLift. Websites, Marketing & Customer Systems for Local Businesses.</div>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="services.html" class="hover:text-white">Services</a>
+        <a href="portfolio.html" class="hover:text-white">Sample Websites</a>
+        <a href="pricing.html" class="hover:text-white">Pricing</a>
+        <a href="quote.html" class="hover:text-white text-brand-400 font-bold">Request Quote</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       CONFIRMATION MODAL
+       ========================================== -->
+  <div id="quoteSuccessModal" class="modal-overlay modal-hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="modal-content bg-white w-full max-w-lg rounded-2xl shadow-2xl p-6 sm:p-8 text-center border border-slate-300">
+      <div class="w-14 h-14 rounded-full bg-brand-100 text-brand-700 mx-auto flex items-center justify-center mb-4">
+        <i data-lucide="check-circle" class="w-8 h-8"></i>
+      </div>
+      <h3 class="text-2xl font-bold text-slate-900 mb-2">Proposal Request Received!</h3>
+      <p class="text-xs sm:text-sm text-slate-600 mb-6">
+        Thank you for submitting your details. We have received your request and our local business specialist is preparing your proposal.
+      </p>
+
+      <div id="quoteSummaryBox" class="mb-6">
+        <!-- JS Injected summary -->
+      </div>
+
+      <div class="flex gap-3">
+        <button onclick="closeQuoteModal()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm py-3 rounded-xl transition">
+          Return to Site
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- URL Query Parameter Handler for Pre-selecting packages -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Pre-select package from URL param
+      const urlParams = new URLSearchParams(window.location.search);
+      const pkg = urlParams.get('package');
+      if (pkg === 'starter') {
+        const starterRadio = document.querySelector('input[name="budget"][value^="Starter"]');
+        if (starterRadio) { starterRadio.checked = true; starterRadio.dispatchEvent(new Event('change')); }
+      } else if (pkg === 'fullservice') {
+        const fullRadio = document.querySelector('input[name="budget"][value^="Pro"]');
+        if (fullRadio) { fullRadio.checked = true; fullRadio.dispatchEvent(new Event('change')); }
+      }
+
+      // Handle form submission → Formspree + show thank-you modal
+      const form = document.getElementById('quoteForm');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            // Show the success modal
+            const modal = document.getElementById('quoteSuccessModal');
+            if (modal) { modal.classList.remove('modal-hidden'); }
+            form.reset();
+          } else {
+            alert('Something went wrong. Please try again or call us at (641) 295-2311.');
+          }
+        } catch (err) {
+          alert('Network error. Please try again or call us at (641) 295-2311.');
+        }
+
+        btn.textContent = 'Submit & Generate My Custom Proposal →';
+        btn.disabled = false;
+      });
+    });
+  </script>
+</body>
+</html>

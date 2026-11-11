@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | LocalLift - Complete Local Business Growth Engine</title>
+  <meta name="description" content="Explore our 5 core services: Website Development, AI Marketing, Customer Management, Online Reputation, and Website Maintenance.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              950: '#052e16',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- ==========================================
+       TOP BAR
+       ========================================== -->
+  <div class="bg-brand-900 text-brand-100 text-xs py-2 px-4 border-b border-brand-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="inline-flex items-center justify-center bg-brand-500 text-brand-950 font-black rounded-full px-2 py-0.5 text-[10px] uppercase">Transparent Pricing</span>
+        <span>Starter Websites from $399 • Fast 5-7 Day Turnaround</span>
+      </div>
+      <div class="flex items-center gap-4 text-brand-200">
+        <span class="hidden md:inline">📞 Questions? Call us: <a href="tel:6412952311" class="text-white hover:underline font-semibold">(641) 295-2311</a></span>
+        <a href="quote.html" class="text-brand-300 hover:text-white font-bold underline">Get Free Quote &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       NAVIGATION
+       ========================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white shadow-md shadow-brand-700/20 group-hover:bg-brand-600 transition">
+          <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center">
+            <span class="font-extrabold text-2xl tracking-tight text-slate-900">Local<span class="text-brand-600">Lift</span></span>
+          </div>
+          <span class="text-[10px] tracking-widest text-slate-500 font-semibold uppercase -mt-1">Websites • Marketing • More Customers</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="index.html" class="hover:text-brand-700 transition">Home</a>
+        <a href="services.html" class="text-brand-700 font-bold border-b-2 border-brand-600 pb-0.5">Services</a>
+        <a href="portfolio.html" class="hover:text-brand-700 transition">Sample Websites</a>
+        <a href="pricing.html" class="hover:text-brand-700 transition">Pricing & Packages</a>
+        <a href="index.html#how-it-works" class="hover:text-brand-700 transition">How It Works</a>
+        <a href="index.html#roi-calculator" class="hover:text-brand-700 transition">ROI Calculator</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="quote.html" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-md transition">
+          <span>Get Free Consultation</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="index.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Home</a>
+      <a href="services.html" class="block font-bold text-brand-700 py-1">Services</a>
+      <a href="portfolio.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Sample Websites</a>
+      <a href="pricing.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Pricing</a>
+      <a href="quote.html" class="block font-bold text-brand-700 py-2">Get Free Consultation &rarr;</a>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO BANNER
+       ========================================== -->
+  <section class="bg-gradient-hero py-16 border-b border-slate-200 text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="text-brand-700 text-xs font-bold tracking-widest uppercase bg-brand-100 px-3 py-1 rounded-full">
+        Everything Under One Roof
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 mt-4 tracking-tight">
+        What We Sell: <span class="text-gradient-green">5 Core Services</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 mt-4 max-w-2xl mx-auto">
+        We don't just sell code. We sell a dependable, stress-free engine that gets your phone ringing and keeps your schedule filled.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       DETAILED 5 SERVICE SECTIONS
+       ========================================== -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+
+    <!-- 1. WEBSITE DEVELOPMENT -->
+    <section id="web-dev" class="scroll-mt-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
+      <div class="lg:col-span-7 space-y-5">
+        <div class="inline-flex items-center gap-2 bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded-full">
+          <i data-lucide="layout" class="w-4 h-4"></i>
+          <span>Service Pillar 01</span>
+        </div>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+          Website Development
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Your website is your storefront. When someone hears your name or finds you on Google, your website determines whether they call you or click to a competitor. We build clean, high-speed websites crafted specifically for local trade & service businesses.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Custom Business Websites</h4>
+              <p class="text-[11px] text-slate-500">Tailored to your specific services, local service area, and branding.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Mobile-Friendly Designs</h4>
+              <p class="text-[11px] text-slate-500">Over 70% of clients visit on smartphones; every page is 100% responsive.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Service & Pricing Pages</h4>
+              <p class="text-[11px] text-slate-500">Clear itemized menus and starting rates that eliminate bargain hunters.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Estimate-Request Buttons</h4>
+              <p class="text-[11px] text-slate-500">High-contrast, easy-to-tap forms placed right where visitors look.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Contact Forms & Click-To-Call</h4>
+              <p class="text-[11px] text-slate-500">One-tap telephone dialing and instant submission forms.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Domain & Hosting Setup</h4>
+              <p class="text-[11px] text-slate-500">We configure your custom URL (.com), SSL security lock, and fast cloud servers.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="quote.html?service=website" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition">
+            <span>Get Started On Your Website</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 bg-slate-100 rounded-2xl p-6 border border-slate-200">
+        <div class="bg-white rounded-xl p-5 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b pb-3">
+            <span class="text-xs font-bold text-slate-900">Website Deliverables</span>
+            <span class="text-[10px] bg-brand-100 text-brand-800 font-bold px-2 py-0.5 rounded">All-Inclusive</span>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-600">
+            <li class="flex items-center justify-between">
+              <span>Homepage + 3-5 Subpages</span>
+              <span class="font-bold text-slate-900">Included</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>SSL Certificate (HTTPS Lock)</span>
+              <span class="font-bold text-slate-900">Included</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>Mobile Phone Optimization</span>
+              <span class="font-bold text-slate-900">Included</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>Customer Estimate Form</span>
+              <span class="font-bold text-slate-900">Included</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>100% Code & Asset Ownership</span>
+              <span class="font-bold text-brand-700 font-extrabold">Yours Forever</span>
+            </li>
+          </ul>
+          <div class="bg-brand-50 p-3 rounded-lg border border-brand-200 text-center">
+            <span class="text-xs text-brand-900 font-bold">Starting at $399 one-time setup</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. AI MARKETING -->
+    <section id="ai-marketing" class="scroll-mt-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
+      <div class="lg:col-span-7 space-y-5">
+        <div class="inline-flex items-center gap-2 bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded-full">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>Service Pillar 02</span>
+        </div>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+          AI Marketing & Social Media
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Most small business owners know they should post on Facebook and Instagram, but after an 8-hour workday on their feet, who has the energy? We harness smart creative AI tools to generate engaging content, graphics, and local campaigns for you.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Facebook & Instagram Posts</h4>
+              <p class="text-[11px] text-slate-500">Engaging captions with local hashtags that keep your brand top-of-mind.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Advertising Graphics</h4>
+              <p class="text-[11px] text-slate-500">Eye-catching before/after visuals, seasonal banners, and promo flyers.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Promotional Campaigns</h4>
+              <p class="text-[11px] text-slate-500">Spring lawn cleanups, holiday detailing specials, winter maintenance discounts.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Monthly Content Calendars</h4>
+              <p class="text-[11px] text-slate-500">Planned 30 days ahead so you never wonder what to post next.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Marketing & Re-Engagement Emails</h4>
+              <p class="text-[11px] text-slate-500">Remind past customers to book their annual tune-up or seasonal service.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="quote.html?service=marketing" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition">
+            <span>Boost Your Social Presence</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 bg-slate-900 text-white rounded-2xl p-6 border border-slate-800">
+        <div class="space-y-4">
+          <div class="text-xs font-bold text-brand-400 uppercase tracking-wider">How Local AI Marketing Works</div>
+          <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-xs space-y-3">
+            <div class="flex items-center gap-2 text-brand-300 font-bold">
+              <span>📸 1. You snap a quick photo on the job</span>
+            </div>
+            <p class="text-slate-400 text-[11px]">You take a photo of a finished patio, clean engine, or gleaming car.</p>
+            
+            <div class="flex items-center gap-2 text-brand-300 font-bold pt-2 border-t border-slate-700">
+              <span>🤖 2. We turn it into a high-converting post</span>
+            </div>
+            <p class="text-slate-400 text-[11px]">We generate the graphic overlay, write the customer-attracting caption, and schedule it.</p>
+            
+            <div class="flex items-center gap-2 text-brand-300 font-bold pt-2 border-t border-slate-700">
+              <span>📈 3. Neighbors see it and request quotes</span>
+            </div>
+            <p class="text-slate-400 text-[11px]">Local homeowners in your zip codes see proof of your quality work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CUSTOMER MANAGEMENT -->
+    <section id="customer-management" class="scroll-mt-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
+      <div class="lg:col-span-7 space-y-5">
+        <div class="inline-flex items-center gap-2 bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded-full">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>Service Pillar 03</span>
+        </div>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+          Customer Management & Lead Tracking
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Getting website visitors is only half the battle. If an inquiry sits in your inbox for 2 days without a reply, that client is gone. We set you up with dead-simple tools to capture, track, and automatically follow up with every estimate request.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Organize Customer Inquiries</h4>
+              <p class="text-[11px] text-slate-500">Every message, quote request, and phone lead captured in one clean pipeline.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Track Estimate Requests</h4>
+              <p class="text-[11px] text-slate-500">Know immediately which estimates are pending, sent, or accepted.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Follow-Up Reminders</h4>
+              <p class="text-[11px] text-slate-500">Automated nudges send a polite text or email 48 hours after an estimate is sent.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Customer Contact Management</h4>
+              <p class="text-[11px] text-slate-500">A clean address book of past clients, job history, and recurring schedules.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Automated Phone & SMS Alerts</h4>
+              <p class="text-[11px] text-slate-500">Ping your phone instantly the moment a homeowner submits a request.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="quote.html?service=leadmanagement" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition">
+            <span>Automate Your Inquiries</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 bg-brand-900 text-white rounded-2xl p-6 border border-brand-800">
+        <h4 class="font-bold text-sm text-brand-200 mb-3">The Power of Fast Response:</h4>
+        <div class="space-y-3 text-xs text-brand-100">
+          <div class="bg-brand-800/80 p-3.5 rounded-xl border border-brand-700">
+            <span class="text-2xl font-black text-brand-300 block">78%</span>
+            <span>of customers buy from the first business that responds to their inquiry.</span>
+          </div>
+          <div class="bg-brand-800/80 p-3.5 rounded-xl border border-brand-700">
+            <span class="text-2xl font-black text-brand-300 block">45%</span>
+            <span>more closed jobs achieved when an automated follow-up reminder is sent on day 2.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ONLINE REPUTATION -->
+    <section id="reputation" class="scroll-mt-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
+      <div class="lg:col-span-7 space-y-5">
+        <div class="inline-flex items-center gap-2 bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded-full">
+          <i data-lucide="star" class="w-4 h-4"></i>
+          <span>Service Pillar 04</span>
+        </div>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+          Online Reputation & Google Reviews
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Google Maps is the modern yellow pages. When a homeowner searches "mechanic near me" or "lawn mower repair", Google displays the top 3 businesses with the best reviews. We ensure you rank high and collect genuine 5-star ratings without hassle.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Google Business Profile Assistance</h4>
+              <p class="text-[11px] text-slate-500">Claim, verify, and fully optimize every field, photo, and service category.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Review Response Suggestions</h4>
+              <p class="text-[11px] text-slate-500">AI-generated professional responses that impress future readers and please Google.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Review-Request Campaigns</h4>
+              <p class="text-[11px] text-slate-500">1-click direct link cards you can text to clients right when a job is finished.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Business Information Updates</h4>
+              <p class="text-[11px] text-slate-500">Keep holiday hours, telephone numbers, and addresses synchronized across the web.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="quote.html?service=google" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition">
+            <span>Claim Your Google Profile</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 bg-amber-50 rounded-2xl p-6 border border-amber-200">
+        <div class="text-center space-y-3">
+          <div class="flex justify-center text-amber-500 gap-1 text-2xl">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <h4 class="font-bold text-sm text-amber-950">Turn Happy Handshakes Into 5-Star Reviews</h4>
+          <p class="text-xs text-amber-900 leading-relaxed">
+            "We used to have 6 reviews over 4 years. LocalLift gave us a simple QR card and text template. We gained 28 reviews in our first 45 days!"
+          </p>
+          <span class="text-[11px] font-bold text-amber-800 block">— Dave M., Timberline Handyman</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WEBSITE MAINTENANCE -->
+    <section id="maintenance" class="scroll-mt-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
+      <div class="lg:col-span-7 space-y-5">
+        <div class="inline-flex items-center gap-2 bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded-full">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+          <span>Service Pillar 05</span>
+        </div>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+          Website Maintenance & Peace of Mind
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Technology changes fast, and broken links or outdated prices make businesses look abandoned. Our optional care plans take care of all the tech chores so you never have to mess with passwords, server updates, or formatting headaches.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Update Pictures & Services</h4>
+              <p class="text-[11px] text-slate-500">Send us a photo or text and we post your newest projects within 24 hours.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Change Pricing & Specials</h4>
+              <p class="text-[11px] text-slate-500">Adjust seasonal pricing, spring discounts, or emergency surcharges anytime.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Fix Website Issues & Bugs</h4>
+              <p class="text-[11px] text-slate-500">Browser updates or broken forms? We monitor and fix issues instantly.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Monitor Website Performance</h4>
+              <p class="text-[11px] text-slate-500">Fast page loads and 99.9% uptime guaranteed.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-xs text-slate-900">Keep Information Current</h4>
+              <p class="text-[11px] text-slate-500">New team members, updated phone numbers, and holiday closures always accurate.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="pricing.html#monthly-plans" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition">
+            <span>Explore Monthly Care Plans ($49/mo)</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 bg-slate-100 rounded-2xl p-6 border border-slate-200">
+        <div class="bg-white rounded-xl p-5 shadow-sm space-y-3">
+          <h4 class="font-bold text-xs text-slate-900 uppercase tracking-wider">No Contracts. Cancel Anytime.</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Our monthly maintenance is completely optional. If you ever want to manage the site yourself, you can do so with zero penalties. We earn your business every month.
+          </p>
+          <div class="pt-2 border-t text-xs font-bold text-brand-700 flex items-center gap-1.5">
+            <i data-lucide="check" class="w-4 h-4"></i>
+            <span>Daily automated backups included</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==========================================
+       CALL TO ACTION
+       ========================================== -->
+  <section class="bg-slate-900 text-white py-16 text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold tracking-tight mb-4">
+        Ready to Put These 5 Engines to Work For You?
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-8">
+        We can start building your custom website this week. No tech skills needed.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="quote.html" class="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm px-8 py-3.5 rounded-xl shadow-lg transition">
+          <span>Get Free Proposal & Consultation</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="portfolio.html" class="inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm px-6 py-3.5 rounded-xl border border-slate-700 transition">
+          <span>View Sample Websites</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="bg-slate-950 text-slate-400 py-10 text-xs border-t border-slate-800 text-center">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>&copy; 2026 LocalLift. Websites, Marketing & Customer Systems for Local Businesses.</div>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="services.html" class="hover:text-white text-brand-400 font-bold">Services</a>
+        <a href="portfolio.html" class="hover:text-white">Sample Websites</a>
+        <a href="pricing.html" class="hover:text-white">Pricing</a>
+        <a href="quote.html" class="hover:text-white">Request Quote</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

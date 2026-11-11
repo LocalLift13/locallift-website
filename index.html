@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalLift | Websites, Marketing & Customer Systems for Local Businesses</title>
+  <meta name="description" content="We help local businesses grow with professional websites, AI-powered marketing, and tools that turn online visitors into paying customers.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              950: '#052e16',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- ==========================================
+       TOP ANNOUNCEMENT BAR
+       ========================================== -->
+  <div class="bg-brand-900 text-brand-100 text-xs py-2 px-4 border-b border-brand-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="inline-flex items-center justify-center bg-brand-500 text-brand-950 font-black rounded-full px-2 py-0.5 text-[10px] uppercase tracking-wider">Local First</span>
+        <span>🎉 Free 15-Minute Website & Google Profile Audit for Local Service Businesses</span>
+      </div>
+      <div class="flex items-center gap-4 text-brand-200">
+        <span class="hidden md:inline">📞 Talk with a Local Specialist: <a href="tel:6412952311" class="text-white hover:underline font-semibold">(641) 295-2311</a></span>
+        <a href="quote.html" class="text-brand-300 hover:text-white font-bold underline">Request Quote &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       STICKY NAVIGATION HEADER
+       ========================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white shadow-md shadow-brand-700/20 group-hover:bg-brand-600 transition">
+          <!-- Upward trending bar chart icon with arrow -->
+          <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center">
+            <span class="font-extrabold text-2xl tracking-tight text-slate-900">Local<span class="text-brand-600">Lift</span></span>
+          </div>
+          <span class="text-[10px] tracking-widest text-slate-500 font-semibold uppercase -mt-1">Websites • Marketing • More Customers</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="index.html" class="text-brand-700 font-bold border-b-2 border-brand-600 pb-0.5">Home</a>
+        <a href="services.html" class="hover:text-brand-700 transition">Services</a>
+        <a href="portfolio.html" class="hover:text-brand-700 transition">Sample Websites</a>
+        <a href="pricing.html" class="hover:text-brand-700 transition">Pricing & Packages</a>
+        <a href="#how-it-works" class="hover:text-brand-700 transition">How It Works</a>
+        <a href="#roi-calculator" class="hover:text-brand-700 transition">ROI Calculator</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="pricing.html" class="text-xs font-bold text-slate-700 hover:text-brand-700 px-3 py-2">
+          From $399
+        </a>
+        <a href="quote.html" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-md shadow-brand-700/25 transition">
+          <span>Get Free Consultation</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="index.html" class="block font-bold text-brand-700 py-1">Home</a>
+      <a href="services.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Services (5 Core Pillars)</a>
+      <a href="portfolio.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Sample Websites Portfolio</a>
+      <a href="pricing.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Pricing ($399, $599, $799+)</a>
+      <a href="#how-it-works" class="block font-medium text-slate-700 hover:text-brand-700 py-1">How It Works</a>
+      <a href="#roi-calculator" class="block font-medium text-slate-700 hover:text-brand-700 py-1">ROI Calculator</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="quote.html" class="w-full text-center bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm py-3 rounded-xl shadow">
+          Get Free Website Consultation
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION – YOUR STOREFRONT
+       ========================================== -->
+  <section class="relative bg-gradient-hero pt-12 pb-20 overflow-hidden border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 bg-brand-100 border border-brand-200 text-brand-900 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-brand-600 pulse-green"></span>
+            <span>Built Specifically For Local Service Businesses</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+            Your Business <br class="hidden sm:inline">
+            <span class="text-gradient-green">Deserves to Be Found.</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-600 font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            We help local businesses grow with professional websites, AI-powered marketing, and tools that turn online visitors into paying customers.
+          </p>
+
+          <!-- Handwritten friendly accent -->
+          <div class="flex items-center justify-center lg:justify-start gap-2 text-brand-800 font-handwritten text-2xl -mt-2">
+            <span>✨ Small Business. Big Potential.</span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="quote.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-brand-700/30 transition transform hover:-translate-y-0.5">
+              <span>Get Your Free Website Consultation</span>
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+
+            <a href="portfolio.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-300 font-bold text-base px-7 py-4 rounded-xl shadow-sm transition">
+              <i data-lucide="layout-grid" class="w-5 h-5 text-brand-700"></i>
+              <span>See What We Can Build</span>
+            </a>
+          </div>
+
+          <!-- Trust Proof Points -->
+          <div class="pt-4 grid grid-cols-3 gap-4 border-t border-slate-200/80 max-w-lg mx-auto lg:mx-0 text-left">
+            <div>
+              <div class="text-xl sm:text-2xl font-black text-slate-900">5-7 Days</div>
+              <div class="text-xs text-slate-500 font-medium">Fast Turnaround</div>
+            </div>
+            <div>
+              <div class="text-xl sm:text-2xl font-black text-slate-900">100% Owned</div>
+              <div class="text-xs text-slate-500 font-medium">You Own The Site</div>
+            </div>
+            <div>
+              <div class="text-xl sm:text-2xl font-black text-slate-900">$399</div>
+              <div class="text-xs text-slate-500 font-medium">Affordable Setup</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual Card & Infographic -->
+        <div class="lg:col-span-5 relative">
+          
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Decorative Backing Glow -->
+            <div class="absolute -top-6 -left-6 w-72 h-72 bg-brand-300/40 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute -bottom-6 -right-6 w-72 h-72 bg-emerald-400/30 rounded-full blur-3xl -z-10"></div>
+
+            <!-- Main Visual Card -->
+            <div class="bg-white rounded-2xl p-3 shadow-2xl border border-slate-200/90 overflow-hidden">
+              <div class="relative rounded-xl overflow-hidden border border-slate-100">
+                <img src="assets/images/locallift-infographic-banner.svg" alt="LocalLift" class="w-full h-auto object-cover"/>
+              </div>
+              
+              <div class="p-4 bg-slate-50 rounded-xl mt-3 flex items-center justify-between border border-slate-200/60">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-700">
+                    <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-slate-900">Real Tools. Real Support.</h4>
+                    <p class="text-[11px] text-slate-500">No tech overwhelm. Just more clients.</p>
+                  </div>
+                </div>
+                <a href="#how-it-works" class="text-xs font-bold text-brand-700 hover:text-brand-800 underline">
+                  See Process &rarr;
+                </a>
+              </div>
+            </div>
+
+            <!-- Floating Badge 1 -->
+            <div class="hidden sm:flex absolute -top-4 -right-4 bg-white/95 backdrop-blur-sm border border-slate-200 shadow-xl rounded-xl p-3 items-center gap-3 animate-bounce" style="animation-duration: 4s;">
+              <div class="w-9 h-9 rounded-lg bg-emerald-600 text-white flex items-center justify-center">
+                <i data-lucide="trending-up" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-extrabold text-slate-900">+58% Inquiries</div>
+                <div class="text-[10px] text-slate-500">Avg. 60-day customer boost</div>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2 -->
+            <div class="hidden sm:flex absolute -bottom-10 -left-4 bg-white/95 backdrop-blur-sm border border-slate-200 shadow-xl rounded-xl p-3 items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-amber-500 text-white flex items-center justify-center">
+                <i data-lucide="star" class="w-5 h-5 fill-white"></i>
+              </div>
+              <div>
+                <div class="text-xs font-extrabold text-slate-900">5-Star Google Reputation</div>
+                <div class="text-[10px] text-slate-500">Automated review requests</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TARGET INDUSTRIES TICKER
+       ========================================== -->
+  <section class="bg-white py-6 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
+        Specialized Solutions Crafted For Local Services & Trades
+      </p>
+      <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-6 text-xs sm:text-sm font-semibold text-slate-700">
+        <span class="inline-flex items-center gap-1.5 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200">
+          🌿 Lawn Care & Landscaping
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200">
+          ✨ Cleaning Companies
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200">
+          🔨 Construction & Handyman
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200">
+          🚗 Mobile Auto Detailing
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200">
+          ☕ Cafes & Restaurants
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200">
+          ⚙️ Independent Repair Shops
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE PROBLEM & SOLUTION: CONTRAST SECTION
+       "The Struggle is Real" vs "With LocalLift"
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-b border-slate-200 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-700 text-xs font-bold tracking-widest uppercase bg-brand-100 px-3 py-1 rounded-full">
+          The Reality For Most Small Businesses
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          You're a master at your trade. <br class="hidden sm:inline">
+          <span class="text-slate-600 font-normal">Marketing shouldn't be your second full-time job.</span>
+        </h2>
+        <p class="text-slate-600 text-base mt-4">
+          Most local business owners rely on word-of-mouth and Facebook posts, missing dozens of paying customers who are actively searching Google right now.
+        </p>
+      </div>
+
+      <!-- Before / After Comparison Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        
+        <!-- The Struggle (Left) -->
+        <div class="bg-slate-900 text-white rounded-2xl p-8 border border-slate-800 shadow-xl relative overflow-hidden flex flex-col justify-between">
+          <div class="absolute -top-12 -right-12 w-48 h-48 bg-rose-500/10 rounded-full blur-2xl"></div>
+          
+          <div>
+            <div class="inline-flex items-center gap-2 bg-rose-500/20 text-rose-300 font-bold text-xs px-3 py-1 rounded-full mb-6">
+              <i data-lucide="alert-circle" class="w-4 h-4"></i>
+              <span>Without a Professional System</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-2 font-handwritten text-3xl">
+              "The Struggle is Real..."
+            </h3>
+            <p class="text-slate-400 text-sm mb-6">
+              Missing out on high-value jobs simply because customers can't find you or can't easily book an estimate.
+            </p>
+
+            <ul class="space-y-4 text-sm text-slate-300">
+              <li class="flex items-start gap-3">
+                <span class="text-rose-400 text-lg font-black leading-none">✕</span>
+                <span><strong>No professional website:</strong> Customers think you are an amateur or question your legitimacy.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-rose-400 text-lg font-black leading-none">✕</span>
+                <span><strong>Trapped on Facebook:</strong> Algorithm changes hide your posts, and you have zero control over your audience.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-rose-400 text-lg font-black leading-none">✕</span>
+                <span><strong>Missed customer inquiries:</strong> You are on the job site all day; by the time you reply, they called a competitor.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-rose-400 text-lg font-black leading-none">✕</span>
+                <span><strong>Forgotten estimate follow-ups:</strong> 50% of sent quotes never turn into jobs because nobody reminds the client.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-rose-400 text-lg font-black leading-none">✕</span>
+                <span><strong>Agencies charge $3,000+:</strong> Big digital agencies want thousands per month for complicated fluff you don't need.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+            <span>Result: Stress, dry spells & lost income</span>
+            <span class="text-rose-400 font-bold">Costly Inefficiency</span>
+          </div>
+        </div>
+
+        <!-- The Solution (Right) -->
+        <div class="bg-gradient-to-br from-brand-900 to-brand-950 text-white rounded-2xl p-8 border border-brand-700 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+          <div class="absolute -top-12 -right-12 w-48 h-48 bg-brand-400/20 rounded-full blur-2xl"></div>
+
+          <div>
+            <div class="inline-flex items-center gap-2 bg-brand-500/30 text-brand-200 font-bold text-xs px-3 py-1 rounded-full mb-6">
+              <i data-lucide="check-circle" class="w-4 h-4 text-brand-400"></i>
+              <span>The LocalLift Difference</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-2 font-handwritten text-3xl">
+              "With LocalLift..."
+            </h3>
+            <p class="text-brand-100 text-sm mb-6">
+              An all-in-one affordable engine that works quietly in the background so you can focus on doing what you love.
+            </p>
+
+            <ul class="space-y-4 text-sm text-brand-100">
+              <li class="flex items-start gap-3">
+                <span class="text-brand-400 text-lg font-black leading-none">✓</span>
+                <span><strong>Custom high-converting website:</strong> Mobile-friendly, fast-loading, and branded to look like a million-dollar local leader.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand-400 text-lg font-black leading-none">✓</span>
+                <span><strong>Instant estimate capture buttons:</strong> Homeowners can request a quote in 30 seconds straight from their phone.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand-400 text-lg font-black leading-none">✓</span>
+                <span><strong>Steady customer flow:</strong> Optimized Google Business Profile puts you at the top of local maps.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand-400 text-lg font-black leading-none">✓</span>
+                <span><strong>Automated follow-ups & review requests:</strong> AI prompts happy customers to leave 5-star Google reviews automatically.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand-400 text-lg font-black leading-none">✓</span>
+                <span><strong>Predictable, affordable pricing:</strong> Starting at just $399 one-time. No agency runarounds, no hostage fees.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-brand-800/80 text-xs text-brand-200 flex items-center justify-between">
+            <span>Result: More booked jobs & peace of mind</span>
+            <span class="text-brand-300 font-bold">Fast Payback</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       HOW IT WORKS (4-STEP PROCESS)
+       ========================================== -->
+  <section id="how-it-works" class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-brand-700 text-xs font-bold tracking-widest uppercase bg-brand-100 px-3 py-1 rounded-full">
+          Simple & Painless Setup
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          How LocalLift Works
+        </h2>
+        <p class="text-slate-600 text-base mt-3">
+          We take care of the entire tech headache from start to finish. You don't need any technical skills.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="bento-card bg-slate-50 rounded-2xl p-6 relative">
+          <div class="w-12 h-12 rounded-xl bg-brand-700 text-white font-extrabold text-xl flex items-center justify-center mb-5 shadow-md shadow-brand-700/20">
+            1
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">We build your website</h3>
+          <p class="text-sm text-slate-600">
+            We write the copy, organize your photos, configure your domain, and design a mobile-optimized site customized to your trade.
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-200 text-xs font-semibold text-brand-700">
+            ⚡ Ready in 5-7 business days
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bento-card bg-slate-50 rounded-2xl p-6 relative">
+          <div class="w-12 h-12 rounded-xl bg-brand-700 text-white font-extrabold text-xl flex items-center justify-center mb-5 shadow-md shadow-brand-700/20">
+            2
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">We launch your marketing</h3>
+          <p class="text-sm text-slate-600">
+            We create eye-catching social graphics, polish your Google Business profile, and craft promotional posts that bring people in.
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-200 text-xs font-semibold text-brand-700">
+            📱 Facebook, Instagram & Google
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bento-card bg-slate-50 rounded-2xl p-6 relative">
+          <div class="w-12 h-12 rounded-xl bg-brand-700 text-white font-extrabold text-xl flex items-center justify-center mb-5 shadow-md shadow-brand-700/20">
+            3
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">We capture your leads</h3>
+          <p class="text-sm text-slate-600">
+            Visitors submit estimate requests in seconds. You get instant alerts on your phone so you never miss another customer.
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-200 text-xs font-semibold text-brand-700">
+            🔔 Instant SMS & Email Alerts
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bento-card bg-slate-50 rounded-2xl p-6 relative">
+          <div class="w-12 h-12 rounded-xl bg-brand-700 text-white font-extrabold text-xl flex items-center justify-center mb-5 shadow-md shadow-brand-700/20">
+            4
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">We track & maintain</h3>
+          <p class="text-sm text-slate-600">
+            We monitor your site health, update prices or seasonal specials anytime, and track visitor growth every single month.
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-200 text-xs font-semibold text-brand-700">
+            📈 Ongoing updates & peace of mind
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Process Banner Action -->
+      <div class="mt-12 text-center">
+        <a href="quote.html" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-base px-8 py-3.5 rounded-xl shadow-md transition">
+          <span>Let's Get Your Business Online</span>
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CORE SERVICES (BENTO GRID OVERVIEW)
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-brand-700 text-xs font-bold tracking-widest uppercase bg-brand-100 px-3 py-1 rounded-full">
+            What We Do For You
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+            5 Ways We Grow Your Local Business
+          </h2>
+          <p class="text-slate-600 text-base mt-2 max-w-xl">
+            Everything your business needs to build credibility, get discovered, and consistently sign new clients.
+          </p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="services.html" class="inline-flex items-center gap-2 text-sm font-bold text-brand-700 hover:text-brand-800">
+            <span>Explore In-Depth Services</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bento Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Service 1: Website Development -->
+        <div class="bento-card bg-white rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center mb-5">
+              <i data-lucide="layout" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">1. Website Development</h3>
+            <p class="text-sm text-slate-600 mb-4">
+              Custom business websites tailored to your services. Responsive on smartphones, iPads, and computers.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Mobile-friendly, lightning-fast design</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Clear service & transparent pricing pages</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Fast estimate-request forms & buttons</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Custom domain & secure hosting setup</span>
+              </li>
+            </ul>
+          </div>
+          <a href="services.html#web-dev" class="text-xs font-bold text-brand-700 hover:text-brand-800 flex items-center gap-1">
+            <span>Learn more about websites</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 2: AI Marketing -->
+        <div class="bento-card bg-white rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center mb-5">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">2. AI Marketing & Social</h3>
+            <p class="text-sm text-slate-600 mb-4">
+              Stop stressing over what to post. We use smart tools to generate professional graphics and local campaigns.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Done-for-you Facebook & Instagram posts</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Branded advertising graphics & banners</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Monthly seasonal promotion campaigns</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Customer re-engagement emails</span>
+              </li>
+            </ul>
+          </div>
+          <a href="services.html#ai-marketing" class="text-xs font-bold text-brand-700 hover:text-brand-800 flex items-center gap-1">
+            <span>Learn more about marketing</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 3: Customer Management -->
+        <div class="bento-card bg-white rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center mb-5">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">3. Customer Management</h3>
+            <p class="text-sm text-slate-600 mb-4">
+              Never lose a customer lead in messy notes again. Simple tools to organize every inquiry and quote.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Organized customer inbox & inquiry tracking</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Estimate request status tracker</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Automated quote follow-up reminders</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Instant dispatch notifications to your phone</span>
+              </li>
+            </ul>
+          </div>
+          <a href="services.html#customer-management" class="text-xs font-bold text-brand-700 hover:text-brand-800 flex items-center gap-1">
+            <span>Learn more about lead tracking</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 4: Online Reputation -->
+        <div class="bento-card bg-white rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center mb-5">
+              <i data-lucide="star" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">4. Online Reputation</h3>
+            <p class="text-sm text-slate-600 mb-4">
+              Dominate Google search and Maps. Turn satisfied homeowners into raving 5-star Google reviews.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Google Business Profile audit & optimization</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>1-click review request links & campaigns</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>AI review response recommendations</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Accurate business hours, photos & services</span>
+              </li>
+            </ul>
+          </div>
+          <a href="services.html#reputation" class="text-xs font-bold text-brand-700 hover:text-brand-800 flex items-center gap-1">
+            <span>Learn more about Google ranking</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Service 5: Website Maintenance -->
+        <div class="bento-card bg-white rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center mb-5">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">5. Website Maintenance</h3>
+            <p class="text-sm text-slate-600 mb-4">
+              We keep your website secure, fresh, and error-free. Need a price changed? Send a text and we handle it.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Update project photos, team & services</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Change pricing and seasonal packages</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Continuous security patches & bug fixes</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>24/7 uptime monitoring & daily backups</span>
+              </li>
+            </ul>
+          </div>
+          <a href="services.html#maintenance" class="text-xs font-bold text-brand-700 hover:text-brand-800 flex items-center gap-1">
+            <span>Learn more about care plans</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Featured Callout Card -->
+        <div class="bento-card bg-gradient-brand text-white rounded-2xl p-7 flex flex-col justify-between shadow-xl">
+          <div>
+            <span class="inline-block bg-brand-500/30 text-brand-200 text-xs font-extrabold px-3 py-1 rounded-full mb-4">
+              NOT JUST A WEBSITE
+            </span>
+            <h3 class="text-xl font-bold text-white mb-3">A Complete Customer Growth System</h3>
+            <p class="text-sm text-brand-100 leading-relaxed">
+              Anyone can put a template online. We build you an engine that solves the 5 biggest bottlenecks keeping local businesses small.
+            </p>
+          </div>
+          <div class="pt-6">
+            <a href="quote.html" class="w-full inline-flex items-center justify-center gap-2 bg-white text-brand-900 hover:bg-brand-50 font-extrabold text-sm py-3 px-4 rounded-xl shadow transition">
+              <span>Request Free Consultation</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SAMPLE WEBSITES SHOWCASE (PORTFOLIO PREVIEWS)
+       ========================================== -->
+  <section class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-brand-700 text-xs font-bold tracking-widest uppercase bg-brand-100 px-3 py-1 rounded-full">
+          Demonstration Projects
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          See What We Can Build For Your Business
+        </h2>
+        <p class="text-slate-600 text-base mt-3">
+          Explore interactive demonstrations of websites built for specific trades. Click "View Live Demo" to interact with each one!
+        </p>
+      </div>
+
+      <!-- Industry Grid (6 Categories) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- 1. Lawn Care & Landscaping -->
+        <div class="bento-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-emerald-800 to-green-700 p-5 text-white flex flex-col justify-between relative overflow-hidden">
+              <div class="flex justify-between items-start">
+                <span class="bg-white/20 backdrop-blur-sm text-white font-bold text-xs px-2.5 py-1 rounded-full">Lawn Care & Landscaping</span>
+                <span class="text-2xl">🌱</span>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold">Riverside Landscaping</h4>
+                <p class="text-xs text-emerald-100 font-handwritten text-lg">"Beautiful Lawns. Lasting Impressions."</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Problem Solved:</div>
+              <p class="text-xs text-slate-600 mb-4">
+                Lost evening & weekend quote requests. Replaced phone tag with an instant 30-second yard estimate calculator.
+              </p>
+              <div class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <div class="flex items-center gap-1.5 text-brand-700">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  <span>Instant Yard Size & Mowing Calculator</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-brand-700">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  <span>Automated SMS Lead Dispatch</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button onclick="openDemo('lawncare')" class="w-full bg-slate-900 hover:bg-brand-700 text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+              <span>View Interactive Live Demo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Auto Detailing -->
+        <div class="bento-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-slate-900 to-sky-900 p-5 text-white flex flex-col justify-between relative overflow-hidden">
+              <div class="flex justify-between items-start">
+                <span class="bg-white/20 backdrop-blur-sm text-white font-bold text-xs px-2.5 py-1 rounded-full">Mobile Detailing</span>
+                <span class="text-2xl">🚗</span>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold">Apex Auto Detailing</h4>
+                <p class="text-xs text-sky-200 font-handwritten text-lg">"Showroom Shine Delivered to Your Driveway."</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Problem Solved:</div>
+              <p class="text-xs text-slate-600 mb-4">
+                Owner spent hours answering repetitive DMs about pricing. Added visual packages and direct calendar booking.
+              </p>
+              <div class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <div class="flex items-center gap-1.5 text-sky-700">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  <span>One-Click Mobile Van Booking</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-sky-700">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  <span>Ceramic Coating & Package Cards</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button onclick="openDemo('autodetailing')" class="w-full bg-slate-900 hover:bg-sky-700 text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+              <span>View Interactive Live Demo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Cleaning Companies -->
+        <div class="bento-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-teal-800 to-teal-600 p-5 text-white flex flex-col justify-between relative overflow-hidden">
+              <div class="flex justify-between items-start">
+                <span class="bg-white/20 backdrop-blur-sm text-white font-bold text-xs px-2.5 py-1 rounded-full">Cleaning Companies</span>
+                <span class="text-2xl">✨</span>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold">SparklePro Cleaning</h4>
+                <p class="text-xs text-teal-100 font-handwritten text-lg">"Spotless Clean Spaces. Guaranteed Peace of Mind."</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Problem Solved:</div>
+              <p class="text-xs text-slate-600 mb-4">
+                Homeowners didn't trust hidden costs. Implemented upfront flat-rate room calculators and bonded/insured trust badges.
+              </p>
+              <div class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <div class="flex items-center gap-1.5 text-teal-700">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  <span>Instant Bedroom/Bathroom Flat-Rates</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-teal-700">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  <span>Recurring 20% Discount Engine</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button onclick="openDemo('cleaning')" class="w-full bg-slate-900 hover:bg-teal-700 text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+              <span>View Interactive Live Demo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Construction & Handyman -->
+        <div class="bento-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-amber-900 to-orange-700 p-5 text-white flex flex-col justify-between relative overflow-hidden">
+              <div class="flex justify-between items-start">
+                <span class="bg-white/20 backdrop-blur-sm text-white font-bold text-xs px-2.5 py-1 rounded-full">Handyman & Remodeling</span>
+                <span class="text-2xl">🔨</span>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold">Timberline Handyman</h4>
+                <p class="text-xs text-amber-200 font-handwritten text-lg">"Solid Craftsmanship. Honest Estimates."</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Problem Solved:</div>
+              <p class="text-xs text-slate-600 mb-4">
+                Relying solely on word-of-mouth left dry spells. Built a project gallery showcase and emergency repair hotline.
+              </p>
+              <div class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <div class="flex items-center gap-1.5 text-orange-700">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  <span>Flat-Rate Small Repair Menu</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-orange-700">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  <span>Fast Remodel Estimate Dispatch</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button onclick="openDemo('construction')" class="w-full bg-slate-900 hover:bg-orange-700 text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+              <span>View Interactive Live Demo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Restaurants & Coffee Shops -->
+        <div class="bento-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-stone-900 to-amber-950 p-5 text-white flex flex-col justify-between relative overflow-hidden">
+              <div class="flex justify-between items-start">
+                <span class="bg-white/20 backdrop-blur-sm text-white font-bold text-xs px-2.5 py-1 rounded-full">Cafes & Restaurants</span>
+                <span class="text-2xl">☕</span>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold">Cornerstone Bakery & Cafe</h4>
+                <p class="text-xs text-amber-200 font-handwritten text-lg">"Locally Roasted Coffee. Fresh Daily."</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Problem Solved:</div>
+              <p class="text-xs text-slate-600 mb-4">
+                Menu was a blurry PDF on Facebook and catering inquiries got lost. Created mobile-ready digital menu & catering form.
+              </p>
+              <div class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <div class="flex items-center gap-1.5 text-amber-800">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  <span>Mobile QR Code Digital Menu</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-amber-800">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  <span>Corporate Catering Request Pipeline</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button onclick="openDemo('restaurant')" class="w-full bg-slate-900 hover:bg-amber-800 text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+              <span>View Interactive Live Demo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. Independent Repair Businesses -->
+        <div class="bento-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-slate-800 to-cyan-950 p-5 text-white flex flex-col justify-between relative overflow-hidden">
+              <div class="flex justify-between items-start">
+                <span class="bg-white/20 backdrop-blur-sm text-white font-bold text-xs px-2.5 py-1 rounded-full">Independent Repair</span>
+                <span class="text-2xl">⚙️</span>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold">Precision Small Engine Repair</h4>
+                <p class="text-xs text-cyan-200 font-handwritten text-lg">"Fast Diagnosis. Honest Repairs."</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Problem Solved:</div>
+              <p class="text-xs text-slate-600 mb-4">
+                Endless phone inquiries asking "do you repair model X?". Added brand compatibility triage and drop-off scheduler.
+              </p>
+              <div class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <div class="flex items-center gap-1.5 text-cyan-800">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  <span>Symptom Triage & Model Checker</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-cyan-800">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  <span>Drop-Off Scheduling & Ticket Tracking</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button onclick="openDemo('repair')" class="w-full bg-slate-900 hover:bg-cyan-800 text-white font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+              <span>View Interactive Live Demo</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="portfolio.html" class="inline-flex items-center gap-2 text-sm font-bold text-brand-700 hover:text-brand-800 bg-brand-50 hover:bg-brand-100 border border-brand-200 px-6 py-3 rounded-xl transition">
+          <span>View All Features & Live Showroom In Portfolio</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       ROI CALCULATOR (SHOW BUSINESS OWNERS THE VALUE)
+       ========================================== -->
+  <section id="roi-calculator" class="py-20 bg-slate-900 text-white relative overflow-hidden border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-4">
+          <span class="inline-flex items-center gap-1.5 bg-brand-500/20 text-brand-300 text-xs font-bold px-3 py-1 rounded-full">
+            <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+            <span>Interactive Profit Estimator</span>
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            See How Fast Your Website <br>
+            <span class="text-brand-400">Pays For Itself.</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Most local businesses need just <strong>2 or 3 new customers</strong> to cover the entire setup cost of their website. Everything after that is pure profit.
+          </p>
+
+          <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 space-y-6 mt-6">
+            <div>
+              <div class="flex justify-between items-center text-xs font-bold text-slate-300 mb-2">
+                <span>Your Average Customer / Job Value:</span>
+                <span id="roiAvgJobDisplay" class="text-brand-400 text-base font-black">$250</span>
+              </div>
+              <input type="range" id="roiAvgJob" min="50" max="1500" step="25" value="250" class="w-full accent-brand-500 cursor-pointer">
+              <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                <span>$50 (Small Mowing/Repair)</span>
+                <span>$500 (Detailing/Clean)</span>
+                <span>$1,500+ (Remodel/Hardscape)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-center text-xs font-bold text-slate-300 mb-2">
+                <span>Extra Clients Gained Per Month from Website & Google:</span>
+                <span id="roiNewClientsDisplay" class="text-brand-400 text-base font-black">4 / mo</span>
+              </div>
+              <input type="range" id="roiNewClients" min="1" max="20" step="1" value="4" class="w-full accent-brand-500 cursor-pointer">
+              <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                <span>1 client</span>
+                <span>10 clients</span>
+                <span>20 clients</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="bg-gradient-to-br from-slate-800 to-slate-950 rounded-2xl p-8 border-2 border-brand-500/40 shadow-2xl space-y-6">
+            <div class="text-xs font-bold text-brand-400 tracking-wider uppercase">Projected LocalLift ROI</div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-slate-900/90 rounded-xl p-4 border border-slate-700">
+                <span class="text-xs text-slate-400 block mb-1">New Monthly Revenue</span>
+                <span id="roiMonthlyRevenue" class="text-2xl sm:text-3xl font-extrabold text-white">$1,000</span>
+              </div>
+              <div class="bg-slate-900/90 rounded-xl p-4 border border-slate-700">
+                <span class="text-xs text-slate-400 block mb-1">Estimated Annual Growth</span>
+                <span id="roiAnnualRevenue" class="text-2xl sm:text-3xl font-extrabold text-brand-400">$12,000</span>
+              </div>
+            </div>
+
+            <div class="p-4 bg-brand-950/60 border border-brand-500/30 rounded-xl flex items-center justify-between">
+              <div>
+                <div class="text-xs text-slate-300 font-semibold">Estimated Website Payback Time:</div>
+                <div class="text-[11px] text-slate-400">Based on our recommended Business Growth package ($599)</div>
+              </div>
+              <div id="roiPaybackDays" class="text-xl font-black text-brand-300">~18 days</div>
+            </div>
+
+            <a href="quote.html" class="w-full inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-400 text-slate-950 font-black text-sm py-4 rounded-xl shadow-lg transition">
+              <span>Lock In Your Free Growth Audit Now</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PRICING PACKAGES (STARTER $399, GROWTH $599, FULL $799+)
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-brand-700 text-xs font-bold tracking-widest uppercase bg-brand-100 px-3 py-1 rounded-full">
+          Simple, Transparent Packages
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          Pick The Perfect Fit For Your Business
+        </h2>
+        <p class="text-slate-600 text-base mt-3">
+          Honest setup prices with no hidden gotchas. You own 100% of your website and assets once launched.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Package 1: Starter Website -->
+        <div class="bento-card bg-white rounded-2xl p-8 flex flex-col justify-between border border-slate-200 shadow-sm">
+          <div>
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">For Businesses Getting Online</div>
+            <h3 class="text-2xl font-bold text-slate-900">Starter Website</h3>
+            <p class="text-xs text-slate-600 mt-1 mb-4">A fast, professional online presence so local customers can find your business and request estimates.</p>
+            
+            <div class="flex items-baseline gap-1 my-4 pb-4 border-b border-slate-100">
+              <span class="text-4xl font-black text-slate-900">$399</span>
+              <span class="text-xs text-slate-500 font-semibold">one-time setup</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-slate-700 font-medium mb-8">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Custom professional website</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Mobile-friendly responsive design</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Direct contact information & tap-to-call</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Services & pricing breakdown page</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Fast estimate request form</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Domain & secure hosting configuration</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Turnaround: 5-7 business days</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="quote.html?package=starter" class="w-full text-center bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold text-xs py-3.5 rounded-xl transition">
+            Choose Starter Package
+          </a>
+        </div>
+
+        <!-- Package 2: Business Growth (RECOMMENDED) -->
+        <div class="bento-card bg-white rounded-2xl p-8 flex flex-col justify-between border-2 border-brand-600 shadow-xl relative scale-105 z-10">
+          <div class="popular-banner text-white text-[10px] font-black tracking-widest uppercase py-1 px-4 rounded-full absolute -top-3 left-1/2 transform -translate-x-1/2 shadow-md">
+            RECOMMENDED FOR MOST BUSINESSES
+          </div>
+
+          <div>
+            <div class="text-xs font-bold text-brand-700 uppercase tracking-wider mb-2">Maximum Local Visibility</div>
+            <h3 class="text-2xl font-bold text-slate-900">Business Growth</h3>
+            <p class="text-xs text-slate-600 mt-1 mb-4">Everything in Starter plus Google optimization and social graphics to proactively attract new clients.</p>
+            
+            <div class="flex items-baseline gap-1 my-4 pb-4 border-b border-slate-100">
+              <span class="text-4xl font-black text-slate-900">$599</span>
+              <span class="text-xs text-slate-500 font-semibold">one-time setup</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-slate-700 font-medium mb-8">
+              <li class="flex items-center gap-2 font-bold text-brand-800">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Everything in Starter, plus:</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Branded social media graphics pack</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Google Business Profile setup & optimization</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Local search engine optimization (Local SEO)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Website visitor analytics setup</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Review request campaign starter kit</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Turnaround: 7-10 business days</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="quote.html?package=growth" class="w-full text-center bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs py-3.5 rounded-xl shadow-md shadow-brand-700/30 transition">
+            Choose Business Growth
+          </a>
+        </div>
+
+        <!-- Package 3: Full-Service Marketing -->
+        <div class="bento-card bg-white rounded-2xl p-8 flex flex-col justify-between border border-slate-200 shadow-sm">
+          <div>
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">The Complete Client Machine</div>
+            <h3 class="text-2xl font-bold text-slate-900">Full-Service Marketing</h3>
+            <p class="text-xs text-slate-600 mt-1 mb-4">Complete customer inquiry management, promotional campaign setup, and custom interactive features.</p>
+            
+            <div class="flex items-baseline gap-1 my-4 pb-4 border-b border-slate-100">
+              <span class="text-4xl font-black text-slate-900">$799<span class="text-2xl">+</span></span>
+              <span class="text-xs text-slate-500 font-semibold">custom setup</span>
+            </div>
+
+            <ul class="space-y-3 text-xs text-slate-700 font-medium mb-8">
+              <li class="flex items-center gap-2 font-bold text-brand-800">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Everything in Business Growth, plus:</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Customer inquiry management & lead tracker</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Targeted local marketing campaign launch</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Custom website features (instant estimators, booking)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Automated review response system</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Ongoing priority maintenance & marketing options</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                <span>Turnaround: 10-14 business days</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="quote.html?package=fullservice" class="w-full text-center bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs py-3.5 rounded-xl transition">
+            Choose Full-Service Package
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Add-on Note & Link to detailed pricing page -->
+      <div class="mt-12 p-6 bg-white border border-slate-200 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+        <div>
+          <h4 class="font-bold text-sm text-slate-900">Need ongoing website updates and social media management?</h4>
+          <p class="text-xs text-slate-600">Optional monthly care plans start at just $49/month. No long-term lock-ins.</p>
+        </div>
+        <a href="pricing.html" class="inline-flex items-center gap-2 text-xs font-bold text-brand-700 hover:underline">
+          <span>Compare all features & monthly plans</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       GET A QUOTE / PROPOSAL REQUEST SECTION
+       ========================================== -->
+  <section class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-brand-700 text-xs font-bold tracking-widest uppercase bg-brand-100 px-3 py-1 rounded-full">
+          Get Started Today
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          Request Your Free Website Consultation
+        </h2>
+        <p class="text-slate-600 text-base mt-2">
+          Tell us about your business. We'll put together a clear, no-pressure proposal and website plan within 24 hours.
+        </p>
+      </div>
+
+      <!-- Form Card -->
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-lg">
+        
+        <form id="quoteForm" class="space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Business Name -->
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Business Name *</label>
+              <input type="text" name="business_name" required placeholder="e.g. Apex Lawn & Landscape" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600">
+            </div>
+
+            <!-- Owner Name -->
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Owner's Name *</label>
+              <input type="text" name="owner_name" required placeholder="e.g. Mike Johnson" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Email -->
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Email Address *</label>
+              <input type="email" name="email" required placeholder="mike@example.com" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600">
+            </div>
+
+            <!-- Phone (Optional) -->
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone Number (Optional)</label>
+              <input type="tel" name="phone" placeholder="(555) 000-0000" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Business Type -->
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Type of Business *</label>
+              <select id="quote_business_type" name="business_type" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600">
+                <option value="Lawn care and landscaping">Lawn care and landscaping</option>
+                <option value="Cleaning business">Cleaning business</option>
+                <option value="Construction & handyman">Construction & handyman</option>
+                <option value="Mobile car detailing">Mobile car detailing</option>
+                <option value="Restaurant or coffee shop">Restaurant or coffee shop</option>
+                <option value="Independent repair business">Independent repair business</option>
+                <option value="Other local service">Other local service business</option>
+              </select>
+            </div>
+
+            <!-- Current Website -->
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Current Website (If Any)</label>
+              <input type="text" name="current_website" placeholder="e.g. facebook.com/mylawncare or none" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600">
+            </div>
+          </div>
+
+          <!-- Services Interested In -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">Services You Are Interested In (Check all that apply)</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-700">
+              <label class="flex items-center gap-2.5 p-3 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-brand-500">
+                <input type="checkbox" name="services" value="Website Development" checked class="accent-brand-600 w-4 h-4">
+                <span>Website Development (Custom & Mobile)</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-3 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-brand-500">
+                <input type="checkbox" name="services" value="AI Marketing" checked class="accent-brand-600 w-4 h-4">
+                <span>AI Social & Marketing Campaigns</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-3 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-brand-500">
+                <input type="checkbox" name="services" value="Customer Management" class="accent-brand-600 w-4 h-4">
+                <span>Customer Lead & Inquiry Management</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-3 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-brand-500">
+                <input type="checkbox" name="services" value="Google Business Optimization" class="accent-brand-600 w-4 h-4">
+                <span>Google Business Profile & Reviews</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-3 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-brand-500">
+                <input type="checkbox" name="services" value="Website Maintenance" class="accent-brand-600 w-4 h-4">
+                <span>Monthly Maintenance & Care Plan</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Budget Range -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">Target Budget Range</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+              <label class="border border-slate-300 rounded-xl p-3 text-center cursor-pointer bg-white hover:border-brand-600">
+                <input type="radio" name="budget" value="Starter ($399 - $500)" checked class="hidden peer">
+                <span class="block font-bold peer-checked:text-brand-700">Under $500</span>
+                <span class="text-[10px] text-slate-500">Starter Website</span>
+              </label>
+              <label class="border border-slate-300 rounded-xl p-3 text-center cursor-pointer bg-white hover:border-brand-600">
+                <input type="radio" name="budget" value="Growth ($500 - $800)" class="hidden peer">
+                <span class="block font-bold peer-checked:text-brand-700">$500 – $800</span>
+                <span class="text-[10px] text-slate-500">Most Popular</span>
+              </label>
+              <label class="border border-slate-300 rounded-xl p-3 text-center cursor-pointer bg-white hover:border-brand-600">
+                <input type="radio" name="budget" value="Pro ($800 - $1,500)" class="hidden peer">
+                <span class="block font-bold peer-checked:text-brand-700">$800 – $1,500</span>
+                <span class="text-[10px] text-slate-500">Full Service</span>
+              </label>
+              <label class="border border-slate-300 rounded-xl p-3 text-center cursor-pointer bg-white hover:border-brand-600">
+                <input type="radio" name="budget" value="Custom ($1,500+)" class="hidden peer">
+                <span class="block font-bold peer-checked:text-brand-700">$1,500+</span>
+                <span class="text-[10px] text-slate-500">Custom Multi-Location</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- What they want to improve -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">What Is Your #1 Goal Right Now?</label>
+            <textarea name="goals" rows="3" placeholder="Tell us what you want to improve (e.g. 'I want more estimate calls for weekly mowing', 'I need to look professional to win commercial jobs', 'I am tired of wasting hours on Facebook')..." class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600"></textarea>
+          </div>
+
+          <!-- Live Dynamic Estimator Card -->
+          <div class="bg-brand-50 border border-brand-200 rounded-xl p-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div>
+              <span class="text-xs text-brand-800 font-bold block">Live Recommendation: <span id="calcRecommendedTier" class="text-brand-900 font-black">Business Growth</span></span>
+              <span class="text-[11px] text-brand-700">Estimated Timeline: <strong id="calcEstimatedTimeline">7-10 Business Days</strong></span>
+            </div>
+            <div class="text-right">
+              <span class="text-xs text-slate-500 block">Estimated Investment:</span>
+              <span id="calcEstimatedPrice" class="text-xl font-black text-brand-900">$599</span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="w-full bg-brand-700 hover:bg-brand-800 text-white font-extrabold text-base py-4 rounded-xl shadow-lg shadow-brand-700/25 transition">
+            Send My Free Proposal Request &rarr;
+          </button>
+
+          <p class="text-center text-[11px] text-slate-500">
+            🔒 100% Privacy. Zero spam. We never sell your contact info.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FREQUENTLY ASKED QUESTIONS
+       ========================================== -->
+  <section class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14">
+        <span class="text-brand-700 text-xs font-bold tracking-widest uppercase bg-brand-100 px-3 py-1 rounded-full">
+          Answers to Common Questions
+        </span>
+        <h2 class="text-3xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          Everything You Need to Know
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-toggle w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+            <span>Do I actually own my website after you build it?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <strong>Yes, 100%.</strong> Unlike traditional agencies that hold your domain and code hostage, you own your domain, all design files, and all content. If you ever decide to move or host it somewhere else, you take everything with you.
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-toggle w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+            <span>Why not just keep using Facebook for my business?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Facebook is great, but 80%+ of high-ticket homeowners search Google first when they need someone to clean their gutters, fix an engine, or remodel a bathroom. Having a fast professional website ensures you show up on Google Maps and gives homeowners confidence that you are a legitimate, licensed business.
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-toggle w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+            <span>How much time do I need to spend on this?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            About <strong>20 to 30 minutes total</strong>. You fill out our simple questionnaire or hop on a quick phone call to tell us about your services and send over any pictures you have. We do all the heavy lifting, writing, design, and technical configuration.
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-toggle w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+            <span>Are there any ongoing or monthly hidden fees?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <strong>No hidden fees whatsoever.</strong> Our setup packages ($399, $599, $799) are clear one-time investments. We offer an optional monthly Care & Hosting plan for $49/month (covers secure cloud hosting, SSL, daily backups, and photo/price updates), but you are free to self-host if you prefer.
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="faq-toggle w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+            <span>What does "AI Marketing" mean for my local business?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            It means you get agency-level marketing for a fraction of the cost. We use modern AI tools to create high-performing social media captions, design promotional banners, write personalized review response suggestions, and automate follow-ups for estimate requests. You get the results without the expensive agency price tag.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center text-white">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                <polyline points="16 7 22 7 22 13"></polyline>
+              </svg>
+            </div>
+            <span class="font-black text-2xl tracking-tight">Local<span class="text-brand-400">Lift</span></span>
+          </div>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Empowering local trades, home service companies, and neighborhood shops with affordable websites, smart marketing, and customer systems that drive real growth.
+          </p>
+          <div class="text-xs text-brand-300 font-semibold flex items-center gap-2">
+            <span>🌾 Local Businesses. Stronger Communities.</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="services.html" class="hover:text-white transition">All 5 Services</a></li>
+            <li><a href="portfolio.html" class="hover:text-white transition">Sample Websites</a></li>
+            <li><a href="pricing.html" class="hover:text-white transition">Pricing & Packages</a></li>
+            <li><a href="quote.html" class="hover:text-white transition">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-4">Who We Serve</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="portfolio.html" class="hover:text-white transition">Lawn & Landscaping</a></li>
+            <li><a href="portfolio.html" class="hover:text-white transition">Mobile Auto Detailing</a></li>
+            <li><a href="portfolio.html" class="hover:text-white transition">Cleaning Services</a></li>
+            <li><a href="portfolio.html" class="hover:text-white transition">Handyman & Remodeling</a></li>
+            <li><a href="portfolio.html" class="hover:text-white transition">Cafes & Restaurants</a></li>
+            <li><a href="portfolio.html" class="hover:text-white transition">Small Engine & Repair</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-4">Contact & Support</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-400"></i>
+              <a href="tel:6412952311" class="hover:text-white transition">(641) 295-2311</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-400"></i>
+              <span>hello@localliftai.com</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-400"></i>
+              <span>Serving Local Businesses Nationwide</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+        <div>
+          &copy; 2026 LocalLift. All rights reserved.
+        </div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-400">Terms of Service</a>
+          <a href="quote.html" class="text-brand-400 hover:text-brand-300 font-bold">Free Growth Audit</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       INTERACTIVE LIVE DEMO VIEWER MODAL
+       ========================================== -->
+  <div id="demoModal" class="modal-overlay modal-hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6">
+    <div class="modal-content bg-white w-full max-w-5xl h-[90vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-slate-300">
+      
+      <!-- Modal Header -->
+      <div class="bg-slate-900 text-white px-5 py-3.5 flex items-center justify-between border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <span id="demoModalBadge" class="bg-brand-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+            Lawn Care
+          </span>
+          <h3 id="demoModalTitle" class="font-bold text-sm sm:text-base text-white">
+            Live Demonstration Website
+          </h3>
+          <span class="hidden sm:inline text-xs text-slate-400 border-l border-slate-700 pl-3">
+            Interactive Prototype
+          </span>
+        </div>
+
+        <!-- Controls & Close -->
+        <div class="flex items-center gap-2">
+          <!-- Device Toggle -->
+          <div class="hidden sm:flex bg-slate-800 p-1 rounded-lg text-xs">
+            <button id="demoViewDesktop" class="bg-slate-700 text-white px-2.5 py-1 rounded font-medium flex items-center gap-1">
+              <i data-lucide="monitor" class="w-3.5 h-3.5"></i>
+              <span>Desktop</span>
+            </button>
+            <button id="demoViewMobile" class="bg-slate-200 text-slate-700 hover:text-white px-2.5 py-1 rounded font-medium flex items-center gap-1">
+              <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+              <span>Mobile</span>
+            </button>
+          </div>
+
+          <button id="closeDemoModal" class="text-slate-400 hover:text-white p-1 rounded-lg">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Strategy Info Bar -->
+      <div class="bg-slate-100 border-b border-slate-200 px-5 py-2.5 grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+        <div>
+          <span class="font-bold text-slate-900">Problem:</span>
+          <span id="demoModalProblem" class="text-slate-600">Losing after-hours calls</span>
+        </div>
+        <div>
+          <span class="font-bold text-slate-900">Solution:</span>
+          <span id="demoModalSolution" class="text-slate-600">Instant quote calculator</span>
+        </div>
+        <div>
+          <span class="font-bold text-emerald-800">Result:</span>
+          <span id="demoModalResults" class="text-emerald-700 font-semibold">+58% inquiries</span>
+        </div>
+      </div>
+
+      <!-- Main Interactive Frame -->
+      <div id="demoContainer" class="flex-1 bg-slate-200 overflow-y-auto p-4 flex justify-center items-start">
+        <div id="demoScreen" class="w-full bg-white rounded-xl shadow-lg border border-slate-300 min-h-[500px] transition-all duration-300 overflow-hidden">
+          <!-- Dynamically inserted by JS -->
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="bg-white border-t border-slate-200 px-5 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <span class="text-xs text-slate-500">
+          💡 Want a website like this customized for your trade?
+        </span>
+        <div class="flex items-center gap-3">
+          <a href="quote.html" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-bold px-4 py-2 rounded-lg transition shadow">
+            Get Started on Yours &rarr;
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================
+       QUOTE SUBMISSION CONFIRMATION MODAL
+       ========================================== -->
+  <div id="quoteSuccessModal" class="modal-overlay modal-hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="modal-content bg-white w-full max-w-lg rounded-2xl shadow-2xl p-6 sm:p-8 text-center border border-slate-300">
+      <div class="w-14 h-14 rounded-full bg-brand-100 text-brand-700 mx-auto flex items-center justify-center mb-4">
+        <i data-lucide="check-circle" class="w-8 h-8"></i>
+      </div>
+      <h3 class="text-2xl font-bold text-slate-900 mb-2">Consultation Request Received!</h3>
+      <p class="text-xs sm:text-sm text-slate-600 mb-6">
+        Thank you for trusting LocalLift. We are preparing your custom local business roadmap and estimate.
+      </p>
+
+      <div id="quoteSummaryBox" class="mb-6">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <button onclick="closeQuoteModal()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm py-3 rounded-xl transition">
+        Close & Continue Browsing
+      </button>
+    </div>
+  </div>
+
+  <!-- Lucide Icon Activation -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

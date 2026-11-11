@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing & Packages | LocalLift - Simple, Transparent Website Pricing</title>
+  <meta name="description" content="Simple, transparent website and marketing packages for local businesses. Starter Website at $399, Business Growth at $599, and Full-Service at $799+.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              950: '#052e16',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- ==========================================
+       TOP ANNOUNCEMENT BAR
+       ========================================== -->
+  <div class="bg-brand-900 text-brand-100 text-xs py-2 px-4 border-b border-brand-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="inline-flex items-center justify-center bg-brand-500 text-brand-950 font-black rounded-full px-2 py-0.5 text-[10px] uppercase">100% Transparent</span>
+        <span>No hostage fees. You own 100% of your website, domain, and content.</span>
+      </div>
+      <div class="flex items-center gap-4 text-brand-200">
+        <a href="quote.html" class="text-brand-300 hover:text-white font-bold underline">Request a Free Proposal &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       NAVIGATION
+       ========================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white shadow-md shadow-brand-700/20 group-hover:bg-brand-600 transition">
+          <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center">
+            <span class="font-extrabold text-2xl tracking-tight text-slate-900">Local<span class="text-brand-600">Lift</span></span>
+          </div>
+          <span class="text-[10px] tracking-widest text-slate-500 font-semibold uppercase -mt-1">Websites • Marketing • More Customers</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="index.html" class="hover:text-brand-700 transition">Home</a>
+        <a href="services.html" class="hover:text-brand-700 transition">Services</a>
+        <a href="portfolio.html" class="hover:text-brand-700 transition">Sample Websites</a>
+        <a href="pricing.html" class="text-brand-700 font-bold border-b-2 border-brand-600 pb-0.5">Pricing & Packages</a>
+        <a href="index.html#how-it-works" class="hover:text-brand-700 transition">How It Works</a>
+        <a href="#roi" class="hover:text-brand-700 transition">ROI Calculator</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="quote.html" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-md transition">
+          <span>Get Free Consultation</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="index.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Home</a>
+      <a href="services.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Services</a>
+      <a href="portfolio.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Sample Websites</a>
+      <a href="pricing.html" class="block font-bold text-brand-700 py-1">Pricing</a>
+      <a href="quote.html" class="block font-bold text-brand-700 py-2">Get Free Consultation &rarr;</a>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO HEADER
+       ========================================== -->
+  <section class="bg-gradient-hero py-16 border-b border-slate-200 text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="text-brand-700 text-xs font-bold tracking-widest uppercase bg-brand-100 px-3 py-1 rounded-full">
+        Affordable Technology For Local Businesses
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 mt-4 tracking-tight">
+        Simple, Straightforward <span class="text-gradient-green">Pricing</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 mt-4 max-w-2xl mx-auto">
+        No mysterious $3,000 agency invoices. We provide fixed-price packages designed to pay for themselves within 30 days.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE 3 MAIN PACKAGES
+       ========================================== -->
+  <section class="py-16 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch pt-4">
+
+        <!-- 1. STARTER WEBSITE -->
+        <div class="bento-card bg-white rounded-3xl p-8 flex flex-col justify-between border border-slate-200 shadow-sm relative">
+          <div>
+            <div class="inline-block bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full mb-3">
+              For Businesses Getting Online
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">Starter Website</h3>
+            <p class="text-xs text-slate-600 mt-2 mb-6">
+              A clean, modern online storefront designed to establish credibility, showcase services, and capture inquiries.
+            </p>
+
+            <div class="border-t border-b border-slate-100 py-4 mb-6">
+              <div class="flex items-baseline gap-1">
+                <span class="text-5xl font-black text-slate-900">$399</span>
+                <span class="text-xs text-slate-500 font-semibold">one-time setup</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1">50% deposit to begin, 50% upon final approval and launch.</p>
+            </div>
+
+            <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">What's Included:</h4>
+            <ul class="space-y-3 text-xs text-slate-700 font-medium mb-8">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Professional Custom Website:</strong> Modern layout tailored to your trade.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Mobile-Friendly Design:</strong> Seamless experience on iPhones, Androids, and tablets.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Contact Information & Call-To-Action:</strong> Tap-to-call phone numbers and email links.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Services & Pricing Breakdown Page:</strong> Clearly itemized so customers know your offerings.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Fast Estimate Request Form:</strong> Sends quote notifications straight to your inbox.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Domain & Hosting Setup:</strong> We link your custom URL and configure fast hosting.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Revisions:</strong> 2 complete revision rounds included.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Turnaround:</strong> 5 to 7 business days.</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="quote.html?package=starter" class="w-full text-center bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm py-3.5 rounded-xl transition shadow">
+            Select Starter ($399)
+          </a>
+        </div>
+
+        <!-- 2. BUSINESS GROWTH (RECOMMENDED) -->
+        <div class="bento-card bg-white rounded-3xl p-8 flex flex-col justify-between border-2 border-brand-600 shadow-2xl relative scale-105 z-10">
+          <div class="popular-banner text-white text-[10px] font-black tracking-widest uppercase py-1.5 px-4 rounded-full absolute -top-3.5 left-1/2 transform -translate-x-1/2 shadow-lg">
+            MOST POPULAR & RECOMMENDED
+          </div>
+
+          <div>
+            <div class="inline-block bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded-full mb-3">
+              For Growing Local Leaders
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">Business Growth</h3>
+            <p class="text-xs text-slate-600 mt-2 mb-6">
+              Our flagship system. Everything in Starter plus Google Business ranking and social media graphics to proactively attract clients.
+            </p>
+
+            <div class="border-t border-b border-brand-100 py-4 mb-6 bg-brand-50/50 -mx-8 px-8">
+              <div class="flex items-baseline gap-1">
+                <span class="text-5xl font-black text-slate-900">$599</span>
+                <span class="text-xs text-slate-500 font-semibold">one-time setup</span>
+              </div>
+              <p class="text-[11px] text-brand-800 font-medium mt-1">Our #1 top-rated package for trades & service companies.</p>
+            </div>
+
+            <h4 class="text-xs font-bold text-brand-900 uppercase tracking-wider mb-4">Everything In Starter, Plus:</h4>
+            <ul class="space-y-3 text-xs text-slate-700 font-medium mb-8">
+              <li class="flex items-start gap-2.5 font-bold text-slate-900">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span>Complete Starter Package features</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Social Media Graphics Pack:</strong> 6 custom branded templates for Facebook & Instagram posts.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Google Business Profile Optimization:</strong> Full audit, categories, photos, and local map setup.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Basic Search Optimization (Local SEO):</strong> Target local town keywords (e.g. "lawn care in [Your City]").</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Website Analytics Setup:</strong> See how many local visitors and phone calls you receive each week.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>5-Star Review Starter Kit:</strong> Direct QR codes and SMS copy to request reviews from happy clients.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Revisions:</strong> 3 revision rounds included.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Turnaround:</strong> 7 to 10 business days.</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="quote.html?package=growth" class="w-full text-center bg-brand-700 hover:bg-brand-800 text-white font-extrabold text-sm py-4 rounded-xl shadow-lg shadow-brand-700/30 transition">
+            Select Business Growth ($599) &rarr;
+          </a>
+        </div>
+
+        <!-- 3. FULL-SERVICE MARKETING -->
+        <div class="bento-card bg-white rounded-3xl p-8 flex flex-col justify-between border border-slate-200 shadow-sm relative">
+          <div>
+            <div class="inline-block bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full mb-3">
+              The Complete Client Machine
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">Full-Service Marketing</h3>
+            <p class="text-xs text-slate-600 mt-2 mb-6">
+              For businesses that want an automated inquiry pipeline, custom tools, and active promotional campaigns.
+            </p>
+
+            <div class="border-t border-b border-slate-100 py-4 mb-6">
+              <div class="flex items-baseline gap-1">
+                <span class="text-5xl font-black text-slate-900">$799<span class="text-3xl font-bold">+</span></span>
+                <span class="text-xs text-slate-500 font-semibold">custom setup</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1">Starting price. Scales with multi-location and custom calculator integrations.</p>
+            </div>
+
+            <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4">Everything In Growth, Plus:</h4>
+            <ul class="space-y-3 text-xs text-slate-700 font-medium mb-8">
+              <li class="flex items-start gap-2.5 font-bold text-slate-900">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span>Complete Business Growth features</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Customer Inquiry Management:</strong> Centralized dashboard to track leads, calls, and estimates.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Marketing Campaign Setup:</strong> Targeted local launch campaign (seasonal promos, Meta ads setup).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Custom Interactive Features:</strong> Instant quote calculators, appointment slot booking, or QR menus.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Automated Follow-Up Sequences:</strong> Polite automated reminders sent to prospects who requested a quote.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Ongoing VIP Support:</strong> Priority ticket queue and monthly marketing review.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Revisions:</strong> Unlimited revisions during active development.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-600 shrink-0 mt-0.5"></i>
+                <span><strong>Turnaround:</strong> 10 to 14 business days.</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="quote.html?package=fullservice" class="w-full text-center bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm py-3.5 rounded-xl transition shadow">
+            Select Full-Service ($799+)
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       DETAILED FEATURE COMPARISON TABLE
+       ========================================== -->
+  <section class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-slate-900">Side-by-Side Comparison</h2>
+        <p class="text-slate-600 text-sm mt-2">See exactly what is included in each package with complete transparency.</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b-2 border-slate-200 bg-slate-50">
+              <th class="p-4 font-bold text-slate-900">Feature</th>
+              <th class="p-4 font-bold text-slate-900 text-center">Starter ($399)</th>
+              <th class="p-4 font-bold text-brand-700 text-center bg-brand-50">Business Growth ($599)</th>
+              <th class="p-4 font-bold text-slate-900 text-center">Full-Service ($799+)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Mobile-Friendly Custom Website</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Included</td>
+              <td class="p-4 text-center text-brand-600 font-bold bg-brand-50/50">✓ Included</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Included</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Service & Transparent Pricing Pages</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Included</td>
+              <td class="p-4 text-center text-brand-600 font-bold bg-brand-50/50">✓ Included</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Included</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Estimate Request Form</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Standard</td>
+              <td class="p-4 text-center text-brand-600 font-bold bg-brand-50/50">✓ Standard + Alerts</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Custom Interactive</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Domain & SSL Configuration</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Included</td>
+              <td class="p-4 text-center text-brand-600 font-bold bg-brand-50/50">✓ Included</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Included</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Revision Rounds</td>
+              <td class="p-4 text-center text-slate-700">2 Rounds</td>
+              <td class="p-4 text-center font-bold text-brand-700 bg-brand-50/50">3 Rounds</td>
+              <td class="p-4 text-center font-bold text-brand-700">Unlimited in Build</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Turnaround Timeline</td>
+              <td class="p-4 text-center text-slate-700">5-7 Business Days</td>
+              <td class="p-4 text-center font-bold text-brand-700 bg-brand-50/50">7-10 Business Days</td>
+              <td class="p-4 text-center text-slate-700">10-14 Business Days</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Social Media Graphics Pack</td>
+              <td class="p-4 text-center text-slate-400">—</td>
+              <td class="p-4 text-center text-brand-600 font-bold bg-brand-50/50">✓ 6 Templates</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ 12+ Templates</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Google Business Profile Assistance</td>
+              <td class="p-4 text-center text-slate-400">—</td>
+              <td class="p-4 text-center text-brand-600 font-bold bg-brand-50/50">✓ Full Setup & Audit</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Priority Local Ranking</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Local Search Optimization (SEO)</td>
+              <td class="p-4 text-center text-slate-400">—</td>
+              <td class="p-4 text-center text-brand-600 font-bold bg-brand-50/50">✓ Local Keywords</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Comprehensive SEO</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Website Visitor Analytics</td>
+              <td class="p-4 text-center text-slate-400">—</td>
+              <td class="p-4 text-center text-brand-600 font-bold bg-brand-50/50">✓ Included</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Advanced Dashboard</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Customer Inquiry Tracker</td>
+              <td class="p-4 text-center text-slate-400">—</td>
+              <td class="p-4 text-center text-slate-400 bg-brand-50/50">—</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Included</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Custom Tools (Calculators / Booking)</td>
+              <td class="p-4 text-center text-slate-400">—</td>
+              <td class="p-4 text-center text-slate-400 bg-brand-50/50">—</td>
+              <td class="p-4 text-center text-brand-600 font-bold">✓ Included</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-slate-900">Ownership of Domain & Code</td>
+              <td class="p-4 text-center font-bold text-slate-900">100% Yours</td>
+              <td class="p-4 text-center font-bold text-slate-900 bg-brand-50/50">100% Yours</td>
+              <td class="p-4 text-center font-bold text-slate-900">100% Yours</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       OPTIONAL MONTHLY CARE PLANS
+       ========================================== -->
+  <section id="monthly-plans" class="py-16 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-brand-700 text-xs font-bold tracking-widest uppercase bg-brand-100 px-3 py-1 rounded-full">
+          Ongoing Peace of Mind
+        </span>
+        <h2 class="text-3xl font-extrabold text-slate-900 mt-3 tracking-tight">
+          Optional Monthly Care & Marketing Plans
+        </h2>
+        <p class="text-slate-600 text-sm mt-2">
+          Never worry about broken plugins, server updates, or pricing edits. Cancel or modify anytime with zero contracts.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Monthly 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <h4 class="font-bold text-lg text-slate-900">Care & Hosting</h4>
+            <div class="my-3">
+              <span class="text-3xl font-black text-slate-900">$49</span>
+              <span class="text-xs text-slate-500 font-semibold">/ month</span>
+            </div>
+            <p class="text-xs text-slate-600 mb-4">Fast cloud hosting, daily backups, and up to 1 hour of monthly content and photo updates.</p>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li class="flex items-center gap-2">✓ Ultra-fast SSD cloud hosting</li>
+              <li class="flex items-center gap-2">✓ Automated daily cloud backups</li>
+              <li class="flex items-center gap-2">✓ 24/7 uptime & SSL monitoring</li>
+              <li class="flex items-center gap-2">✓ Monthly phone/pricing/photo edits</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t">
+            <span class="text-[11px] text-slate-500 block text-center">Perfect for maintaining a fresh site</span>
+          </div>
+        </div>
+
+        <!-- Monthly 2 -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-brand-600 shadow-md flex flex-col justify-between relative">
+          <div class="bg-brand-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full absolute -top-2.5 right-4 uppercase">
+            POPULAR ADD-ON
+          </div>
+          <div>
+            <h4 class="font-bold text-lg text-slate-900">Growth & AI Marketing</h4>
+            <div class="my-3">
+              <span class="text-3xl font-black text-slate-900">$149</span>
+              <span class="text-xs text-slate-500 font-semibold">/ month</span>
+            </div>
+            <p class="text-xs text-slate-600 mb-4">Includes everything in Care Plan plus monthly social media graphics, Google profile posts, and review boosts.</p>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li class="flex items-center gap-2 font-bold text-brand-800">✓ Everything in Care & Hosting</li>
+              <li class="flex items-center gap-2">✓ 8 custom social graphics per month</li>
+              <li class="flex items-center gap-2">✓ Google Business seasonal updates</li>
+              <li class="flex items-center gap-2">✓ Automated review response drafting</li>
+              <li class="flex items-center gap-2">✓ Monthly performance summary</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t">
+            <span class="text-[11px] text-brand-800 font-bold block text-center">Best for busy owners wanting more leads</span>
+          </div>
+        </div>
+
+        <!-- Monthly 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <h4 class="font-bold text-lg text-slate-900">Full Autopilot Engine</h4>
+            <div class="my-3">
+              <span class="text-3xl font-black text-slate-900">$299</span>
+              <span class="text-xs text-slate-500 font-semibold">/ month</span>
+            </div>
+            <p class="text-xs text-slate-600 mb-4">Complete agency replacement. Ongoing promotional ad management, lead follow-ups, and monthly strategy calls.</p>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li class="flex items-center gap-2 font-bold text-brand-800">✓ Everything in Growth Plan</li>
+              <li class="flex items-center gap-2">✓ Local advertising campaign management</li>
+              <li class="flex items-center gap-2">✓ Customer follow-up pipeline review</li>
+              <li class="flex items-center gap-2">✓ Priority 4-hour turnaround on updates</li>
+              <li class="flex items-center gap-2">✓ Monthly 1-on-1 strategy call</li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t">
+            <span class="text-[11px] text-slate-500 block text-center">For established businesses expanding fast</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       ROI CALCULATOR (ANCHORED)
+       ========================================== -->
+  <section id="roi" class="py-16 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-extrabold mb-3">Calculate Your Payback Time</h2>
+      <p class="text-slate-300 text-sm max-w-xl mx-auto mb-8">
+        See how acquiring just 2-3 extra customers covers the entire setup cost of your website package.
+      </p>
+
+      <div class="bg-slate-800/90 rounded-2xl p-8 border border-slate-700 max-w-2xl mx-auto text-left space-y-6">
+        <div>
+          <div class="flex justify-between items-center text-xs font-bold text-slate-300 mb-2">
+            <span>Average Job / Customer Value:</span>
+            <span id="roiAvgJobDisplay" class="text-brand-400 text-base font-black">$250</span>
+          </div>
+          <input type="range" id="roiAvgJob" min="50" max="1500" step="25" value="250" class="w-full accent-brand-500 cursor-pointer">
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center text-xs font-bold text-slate-300 mb-2">
+            <span>Extra Jobs Per Month from New Website:</span>
+            <span id="roiNewClientsDisplay" class="text-brand-400 text-base font-black">4 / mo</span>
+          </div>
+          <input type="range" id="roiNewClients" min="1" max="20" step="1" value="4" class="w-full accent-brand-500 cursor-pointer">
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-700">
+          <div>
+            <span class="text-xs text-slate-400 block">Monthly Revenue Gain</span>
+            <span id="roiMonthlyRevenue" class="text-2xl font-black text-white">$1,000</span>
+          </div>
+          <div>
+            <span class="text-xs text-slate-400 block">Estimated Payback Period</span>
+            <span id="roiPaybackDays" class="text-2xl font-black text-brand-400">~18 days</span>
+          </div>
+        </div>
+
+        <a href="quote.html" class="w-full inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-400 text-slate-950 font-black text-xs py-3.5 rounded-xl transition">
+          <span>Get Your Free Website Proposal</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CLEAR PRICING FAQS
+       ========================================== -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-slate-900 text-center mb-8">Frequently Asked Pricing Questions</h2>
+      <div class="space-y-4">
+        
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+          <h4 class="font-bold text-sm text-slate-900 mb-1">Do domain and hosting fees cost extra?</h4>
+          <p class="text-xs text-slate-600">
+            A domain name is typically ~$12 to $15 per year paid directly to standard registrars like Namecheap or Google Domains so you retain 100% legal ownership. We handle the technical linking for free. Hosting is included free for your first 30 days, after which you can use our managed $49/mo plan or host it on your own server.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+          <h4 class="font-bold text-sm text-slate-900 mb-1">What are the payment terms?</h4>
+          <p class="text-xs text-slate-600">
+            We work on a straightforward 50/50 split. 50% deposit to commence work and secure your project schedule, and the remaining 50% only after you review, test, and approve the completed website before it is launched live.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+          <h4 class="font-bold text-sm text-slate-900 mb-1">What if I need changes after the site is launched?</h4>
+          <p class="text-xs text-slate-600">
+            All packages include dedicated revision rounds before launch. After launch, clients on our Care Plan ($49/mo) receive ongoing photo, phone number, and pricing updates whenever needed. Clients without a care plan can request updates on an hourly basis ($65/hr).
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="bg-slate-950 text-slate-400 py-10 text-xs border-t border-slate-800 text-center">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>&copy; 2026 LocalLift. Websites, Marketing & Customer Systems for Local Businesses.</div>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="services.html" class="hover:text-white">Services</a>
+        <a href="portfolio.html" class="hover:text-white">Sample Websites</a>
+        <a href="pricing.html" class="hover:text-white text-brand-400 font-bold">Pricing</a>
+        <a href="quote.html" class="hover:text-white">Request Quote</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

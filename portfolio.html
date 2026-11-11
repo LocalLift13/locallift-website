@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Websites Portfolio | LocalLift</title>
+  <meta name="description" content="Explore live demonstration websites created for local lawn care, auto detailing, cleaning, handyman, restaurant, and repair businesses.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              950: '#052e16',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- ==========================================
+       TOP ANNOUNCEMENT BAR
+       ========================================== -->
+  <div class="bg-brand-900 text-brand-100 text-xs py-2 px-4 border-b border-brand-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="inline-flex items-center justify-center bg-brand-500 text-brand-950 font-black rounded-full px-2 py-0.5 text-[10px] uppercase">Live Showcase</span>
+        <span>Every website is mobile-first, Google-optimized, and built to convert visitors into clients.</span>
+      </div>
+      <div class="flex items-center gap-4 text-brand-200">
+        <a href="quote.html" class="text-brand-300 hover:text-white font-bold underline">Get Your Custom Website &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       NAVIGATION
+       ========================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white shadow-md shadow-brand-700/20 group-hover:bg-brand-600 transition">
+          <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center">
+            <span class="font-extrabold text-2xl tracking-tight text-slate-900">Local<span class="text-brand-600">Lift</span></span>
+          </div>
+          <span class="text-[10px] tracking-widest text-slate-500 font-semibold uppercase -mt-1">Websites • Marketing • More Customers</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="index.html" class="hover:text-brand-700 transition">Home</a>
+        <a href="services.html" class="hover:text-brand-700 transition">Services</a>
+        <a href="portfolio.html" class="text-brand-700 font-bold border-b-2 border-brand-600 pb-0.5">Sample Websites</a>
+        <a href="pricing.html" class="hover:text-brand-700 transition">Pricing & Packages</a>
+        <a href="index.html#how-it-works" class="hover:text-brand-700 transition">How It Works</a>
+        <a href="index.html#roi-calculator" class="hover:text-brand-700 transition">ROI Calculator</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="quote.html" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow-md transition">
+          <span>Get Free Consultation</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="index.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Home</a>
+      <a href="services.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Services</a>
+      <a href="portfolio.html" class="block font-bold text-brand-700 py-1">Sample Websites</a>
+      <a href="pricing.html" class="block font-medium text-slate-700 hover:text-brand-700 py-1">Pricing</a>
+      <a href="quote.html" class="block font-bold text-brand-700 py-2">Get Free Consultation &rarr;</a>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO & DEMO EXPLANATION
+       ========================================== -->
+  <section class="bg-gradient-hero py-14 border-b border-slate-200 text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="text-brand-700 text-xs font-bold tracking-widest uppercase bg-brand-100 px-3 py-1 rounded-full">
+        Real Examples Before You Buy
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 mt-4 tracking-tight">
+        Explore Our <span class="text-gradient-green">Sample Websites</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 mt-4 max-w-2xl mx-auto">
+        We build websites designed specifically to solve the biggest headache in your industry. Click any demo below to interact with it live.
+      </p>
+
+      <!-- Transparency Note -->
+      <div class="mt-6 inline-flex items-center gap-2 bg-white/80 border border-slate-200 text-slate-600 text-xs px-4 py-2 rounded-xl shadow-sm">
+        <i data-lucide="info" class="w-4 h-4 text-brand-700"></i>
+        <span><strong>Demonstration Models:</strong> These show the functional layouts, estimate calculators, and design polish our clients receive.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FILTER TABS
+       ========================================== -->
+  <section class="py-8 bg-white border-b border-slate-200 sticky top-20 z-30 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+      <div class="flex flex-wrap gap-2 justify-center bg-slate-100 p-1.5 rounded-2xl border border-slate-200 text-xs font-bold">
+        <button data-filter="all" class="portfolio-filter-btn bg-emerald-600 text-white px-4 py-2 rounded-xl transition shadow-xs">
+          All Industries (6)
+        </button>
+        <button data-filter="Home Services" class="portfolio-filter-btn bg-white text-slate-700 hover:text-brand-700 px-4 py-2 rounded-xl transition">
+          Home & Property Services
+        </button>
+        <button data-filter="Automotive" class="portfolio-filter-btn bg-white text-slate-700 hover:text-brand-700 px-4 py-2 rounded-xl transition">
+          Automotive & Detailing
+        </button>
+        <button data-filter="Trades" class="portfolio-filter-btn bg-white text-slate-700 hover:text-brand-700 px-4 py-2 rounded-xl transition">
+          Construction & Handyman
+        </button>
+        <button data-filter="Hospitality & Food" class="portfolio-filter-btn bg-white text-slate-700 hover:text-brand-700 px-4 py-2 rounded-xl transition">
+          Cafes & Restaurants
+        </button>
+        <button data-filter="Trades & Repair" class="portfolio-filter-btn bg-white text-slate-700 hover:text-brand-700 px-4 py-2 rounded-xl transition">
+          Appliance & Small Engine Repair
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PORTFOLIO SHOWROOM (6 DETAILED CARDS)
+       ========================================== -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- 1. Lawn Care & Landscaping -->
+        <div class="portfolio-card bento-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between" data-category="Home Services">
+          <div>
+            <!-- Banner / Picture Mockup Header -->
+            <div class="h-48 bg-gradient-to-br from-emerald-800 to-green-700 p-6 text-white flex flex-col justify-between relative">
+              <div class="flex justify-between items-start">
+                <span class="bg-white/20 backdrop-blur-sm text-white font-bold text-xs px-3 py-1 rounded-full">
+                  🌿 Lawn Care & Landscaping
+                </span>
+                <span class="text-3xl">🌱</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Riverside Landscaping</h3>
+                <p class="text-xs text-emerald-100 font-handwritten text-lg">"Beautiful Lawns. Lasting Impressions."</p>
+              </div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <!-- Problem -->
+              <div>
+                <div class="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider">The Problem:</div>
+                <p class="text-xs text-slate-600 mt-0.5">
+                  Losing 40% of evening & weekend phone calls to competitors because homeowners couldn't get a fast estimate without calling.
+                </p>
+              </div>
+
+              <!-- What This Website Solves -->
+              <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-3.5">
+                <div class="text-[11px] font-bold text-emerald-950 uppercase tracking-wider mb-1">What It Solves:</div>
+                <p class="text-xs text-emerald-800">
+                  Built a 30-second yard size estimate calculator, clear tiered mowing plans, and automated SMS dispatch alerts.
+                </p>
+              </div>
+
+              <!-- Key Features -->
+              <div class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <div class="flex items-center gap-2 text-brand-700">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Instant Yard Size & Mowing Estimator</span>
+                </div>
+                <div class="flex items-center gap-2 text-brand-700">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Zero-Contract Recurring Signup Form</span>
+                </div>
+                <div class="flex items-center gap-2 text-brand-700">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Automated Instant SMS Notification</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button onclick="openDemo('lawncare')" class="w-full bg-slate-900 hover:bg-brand-700 text-white font-bold text-xs py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-sm">
+              <i data-lucide="eye" class="w-4 h-4"></i>
+              <span>View Interactive Live Demo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Auto Detailing -->
+        <div class="portfolio-card bento-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between" data-category="Automotive">
+          <div>
+            <div class="h-48 bg-gradient-to-br from-slate-900 to-sky-900 p-6 text-white flex flex-col justify-between relative">
+              <div class="flex justify-between items-start">
+                <span class="bg-white/20 backdrop-blur-sm text-white font-bold text-xs px-3 py-1 rounded-full">
+                  🚗 Mobile Car Detailing
+                </span>
+                <span class="text-3xl">✨</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Apex Mobile Auto Spa</h3>
+                <p class="text-xs text-sky-200 font-handwritten text-lg">"Showroom Shine Delivered to Your Driveway."</p>
+              </div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <div>
+                <div class="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider">The Problem:</div>
+                <p class="text-xs text-slate-600 mt-0.5">
+                  Owner spent 2+ hours every evening answering repetitive DMs about package prices, water availability, and calendar openings.
+                </p>
+              </div>
+
+              <div class="bg-sky-50 border border-sky-100 rounded-xl p-3.5">
+                <div class="text-[11px] font-bold text-sky-950 uppercase tracking-wider mb-1">What It Solves:</div>
+                <p class="text-xs text-sky-800">
+                  Visual package cards (Express, Signature, Ceramic) with online scheduling and upfront deposit collection.
+                </p>
+              </div>
+
+              <div class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <div class="flex items-center gap-2 text-sky-700">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Mobile Van Booking & Slot Selector</span>
+                </div>
+                <div class="flex items-center gap-2 text-sky-700">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Ceramic Coating Upsell Visualizer</span>
+                </div>
+                <div class="flex items-center gap-2 text-sky-700">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Eliminated 80% of repetitive pricing DMs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button onclick="openDemo('autodetailing')" class="w-full bg-slate-900 hover:bg-sky-700 text-white font-bold text-xs py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-sm">
+              <i data-lucide="eye" class="w-4 h-4"></i>
+              <span>View Interactive Live Demo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Cleaning Companies -->
+        <div class="portfolio-card bento-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between" data-category="Home Services">
+          <div>
+            <div class="h-48 bg-gradient-to-br from-teal-900 to-teal-600 p-6 text-white flex flex-col justify-between relative">
+              <div class="flex justify-between items-start">
+                <span class="bg-white/20 backdrop-blur-sm text-white font-bold text-xs px-3 py-1 rounded-full">
+                  🧹 Cleaning Companies
+                </span>
+                <span class="text-3xl">🏡</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">SparklePro Cleaning</h3>
+                <p class="text-xs text-teal-100 font-handwritten text-lg">"Spotless Clean Spaces. Guaranteed Peace of Mind."</p>
+              </div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <div>
+                <div class="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider">The Problem:</div>
+                <p class="text-xs text-slate-600 mt-0.5">
+                  Homeowners feared hidden charges, didn't know if cleaners were bonded/insured, and hesitated to schedule on-site walkthroughs.
+                </p>
+              </div>
+
+              <div class="bg-teal-50 border border-teal-100 rounded-xl p-3.5">
+                <div class="text-[11px] font-bold text-teal-950 uppercase tracking-wider mb-1">What It Solves:</div>
+                <p class="text-xs text-teal-800">
+                  Transparent room-by-room flat rate calculator, verified bonding badges, and 20% recurring discount engine.
+                </p>
+              </div>
+
+              <div class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <div class="flex items-center gap-2 text-teal-700">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Bed/Bath Flat Rate Estimator</span>
+                </div>
+                <div class="flex items-center gap-2 text-teal-700">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Recurring Bi-Weekly Subscription Flow</span>
+                </div>
+                <div class="flex items-center gap-2 text-teal-700">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Bonded & Insured Trust Badges</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button onclick="openDemo('cleaning')" class="w-full bg-slate-900 hover:bg-teal-700 text-white font-bold text-xs py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-sm">
+              <i data-lucide="eye" class="w-4 h-4"></i>
+              <span>View Interactive Live Demo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Construction & Handyman -->
+        <div class="portfolio-card bento-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between" data-category="Trades">
+          <div>
+            <div class="h-48 bg-gradient-to-br from-amber-900 to-orange-700 p-6 text-white flex flex-col justify-between relative">
+              <div class="flex justify-between items-start">
+                <span class="bg-white/20 backdrop-blur-sm text-white font-bold text-xs px-3 py-1 rounded-full">
+                  🔨 Construction & Handyman
+                </span>
+                <span class="text-3xl">📐</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Timberline Remodeling</h3>
+                <p class="text-xs text-amber-200 font-handwritten text-lg">"Solid Craftsmanship. Honest Estimates."</p>
+              </div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <div>
+                <div class="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider">The Problem:</div>
+                <p class="text-xs text-slate-600 mt-0.5">
+                  Relying purely on word-of-mouth led to 2-month dry spells; clients couldn't see proof of craftsmanship or license numbers.
+                </p>
+              </div>
+
+              <div class="bg-amber-50 border border-amber-100 rounded-xl p-3.5">
+                <div class="text-[11px] font-bold text-amber-950 uppercase tracking-wider mb-1">What It Solves:</div>
+                <p class="text-xs text-amber-900">
+                  High-res kitchen/bath remodel gallery, flat-rate small repair pricing, and emergency handyman dispatch button.
+                </p>
+              </div>
+
+              <div class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <div class="flex items-center gap-2 text-orange-700">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Interactive Before & After Project Gallery</span>
+                </div>
+                <div class="flex items-center gap-2 text-orange-700">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Emergency Leak & Repair Dispatch Button</span>
+                </div>
+                <div class="flex items-center gap-2 text-orange-700">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Straightforward Flat-Rate Minor Repair Menu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button onclick="openDemo('construction')" class="w-full bg-slate-900 hover:bg-orange-700 text-white font-bold text-xs py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-sm">
+              <i data-lucide="eye" class="w-4 h-4"></i>
+              <span>View Interactive Live Demo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Restaurants & Coffee Shops -->
+        <div class="portfolio-card bento-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between" data-category="Hospitality & Food">
+          <div>
+            <div class="h-48 bg-gradient-to-br from-stone-900 to-amber-950 p-6 text-white flex flex-col justify-between relative">
+              <div class="flex justify-between items-start">
+                <span class="bg-white/20 backdrop-blur-sm text-white font-bold text-xs px-3 py-1 rounded-full">
+                  ☕ Restaurants & Cafes
+                </span>
+                <span class="text-3xl">🥐</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Cornerstone Cafe & Bakery</h3>
+                <p class="text-xs text-amber-200 font-handwritten text-lg">"Locally Roasted Coffee. Fresh Daily."</p>
+              </div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <div>
+                <div class="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider">The Problem:</div>
+                <p class="text-xs text-slate-600 mt-0.5">
+                  Menu was an illegible PDF on Facebook; lucrative catering orders for local office lunches were falling through the cracks.
+                </p>
+              </div>
+
+              <div class="bg-amber-50 border border-amber-100 rounded-xl p-3.5">
+                <div class="text-[11px] font-bold text-amber-950 uppercase tracking-wider mb-1">What It Solves:</div>
+                <p class="text-xs text-amber-900">
+                  Mobile QR digital menu with real-time specials, dedicated corporate catering order inquiry form, and Google Maps local SEO.
+                </p>
+              </div>
+
+              <div class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <div class="flex items-center gap-2 text-amber-800">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Mobile-First QR Digital Menu</span>
+                </div>
+                <div class="flex items-center gap-2 text-amber-800">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Corporate Catering Request Pipeline</span>
+                </div>
+                <div class="flex items-center gap-2 text-amber-800">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Google Maps Ranking & Direct Directions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button onclick="openDemo('restaurant')" class="w-full bg-slate-900 hover:bg-amber-800 text-white font-bold text-xs py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-sm">
+              <i data-lucide="eye" class="w-4 h-4"></i>
+              <span>View Interactive Live Demo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. Independent Repair Businesses -->
+        <div class="portfolio-card bento-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between" data-category="Trades & Repair">
+          <div>
+            <div class="h-48 bg-gradient-to-br from-slate-800 to-cyan-950 p-6 text-white flex flex-col justify-between relative">
+              <div class="flex justify-between items-start">
+                <span class="bg-white/20 backdrop-blur-sm text-white font-bold text-xs px-3 py-1 rounded-full">
+                  ⚙️ Independent Repair
+                </span>
+                <span class="text-3xl">🔧</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Precision Small Engine Repair</h3>
+                <p class="text-xs text-cyan-200 font-handwritten text-lg">"Fast Diagnosis. Honest Repairs."</p>
+              </div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <div>
+                <div class="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider">The Problem:</div>
+                <p class="text-xs text-slate-600 mt-0.5">
+                  Customers constantly interrupted shop work with repetitive calls asking "do you repair model X?", taking hours of phone tag.
+                </p>
+              </div>
+
+              <div class="bg-cyan-50 border border-cyan-100 rounded-xl p-3.5">
+                <div class="text-[11px] font-bold text-cyan-950 uppercase tracking-wider mb-1">What It Solves:</div>
+                <p class="text-xs text-cyan-900">
+                  Interactive model triage selector, symptom intake form, and same-day drop-off scheduler.
+                </p>
+              </div>
+
+              <div class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <div class="flex items-center gap-2 text-cyan-800">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Brand & Model Diagnostic Triage</span>
+                </div>
+                <div class="flex items-center gap-2 text-cyan-800">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Same-Day Drop-Off Scheduling Form</span>
+                </div>
+                <div class="flex items-center gap-2 text-cyan-800">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                  <span>Eliminated 15 hrs/week of phone interruptions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button onclick="openDemo('repair')" class="w-full bg-slate-900 hover:bg-cyan-800 text-white font-bold text-xs py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-sm">
+              <i data-lucide="eye" class="w-4 h-4"></i>
+              <span>View Interactive Live Demo</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Don't see your industry banner -->
+      <div class="mt-16 bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 text-center max-w-4xl mx-auto shadow-sm">
+        <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-700 mx-auto flex items-center justify-center mb-4">
+          <i data-lucide="wrench" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-900 mb-2">Don't See Your Specific Trade?</h3>
+        <p class="text-slate-600 text-sm max-w-xl mx-auto mb-6">
+          Whether you're a plumber, electrician, roofer, pet groomer, pest control specialist, or boutique gym, we build custom sites configured for your exact services and quote process.
+        </p>
+        <a href="quote.html" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm px-7 py-3.5 rounded-xl shadow transition">
+          <span>Get a Custom Proposal For Your Business</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="bg-slate-950 text-slate-400 py-10 text-xs border-t border-slate-800 text-center">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>&copy; 2026 LocalLift. Websites, Marketing & Customer Systems for Local Businesses.</div>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="services.html" class="hover:text-white">Services</a>
+        <a href="portfolio.html" class="hover:text-white text-brand-400 font-bold">Sample Websites</a>
+        <a href="pricing.html" class="hover:text-white">Pricing</a>
+        <a href="quote.html" class="hover:text-white">Request Quote</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       DEMO MODAL VIEWER
+       ========================================== -->
+  <div id="demoModal" class="modal-overlay modal-hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6">
+    <div class="modal-content bg-white w-full max-w-5xl h-[90vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-slate-300">
+      
+      <div class="bg-slate-900 text-white px-5 py-3.5 flex items-center justify-between border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <span id="demoModalBadge" class="bg-brand-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+            Lawn Care
+          </span>
+          <h3 id="demoModalTitle" class="font-bold text-sm sm:text-base text-white">
+            Live Demonstration Website
+          </h3>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <div class="hidden sm:flex bg-slate-800 p-1 rounded-lg text-xs">
+            <button id="demoViewDesktop" class="bg-slate-700 text-white px-2.5 py-1 rounded font-medium flex items-center gap-1">
+              <i data-lucide="monitor" class="w-3.5 h-3.5"></i>
+              <span>Desktop</span>
+            </button>
+            <button id="demoViewMobile" class="bg-slate-200 text-slate-700 hover:text-white px-2.5 py-1 rounded font-medium flex items-center gap-1">
+              <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+              <span>Mobile</span>
+            </button>
+          </div>
+
+          <button id="closeDemoModal" class="text-slate-400 hover:text-white p-1 rounded-lg">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-slate-100 border-b border-slate-200 px-5 py-2.5 grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+        <div><span class="font-bold text-slate-900">Problem:</span> <span id="demoModalProblem" class="text-slate-600">...</span></div>
+        <div><span class="font-bold text-slate-900">Solution:</span> <span id="demoModalSolution" class="text-slate-600">...</span></div>
+        <div><span class="font-bold text-emerald-800">Results:</span> <span id="demoModalResults" class="text-emerald-700 font-semibold">...</span></div>
+      </div>
+
+      <div id="demoContainer" class="flex-1 bg-slate-200 overflow-y-auto p-4 flex justify-center items-start">
+        <div id="demoScreen" class="w-full bg-white rounded-xl shadow-lg border border-slate-300 min-h-[500px] transition-all duration-300 overflow-hidden">
+        </div>
+      </div>
+
+      <div class="bg-white border-t border-slate-200 px-5 py-3 flex justify-between items-center">
+        <span class="text-xs text-slate-500">
+          💡 Ready to get a website like this for your trade?
+        </span>
+        <a href="quote.html" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-bold px-4 py-2 rounded-lg transition shadow">
+          Get Free Consultation &rarr;
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
