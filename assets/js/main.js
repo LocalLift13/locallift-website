@@ -1,5 +1,5 @@
 /**
- * LocalLift - Main Interactive Script
+ * SmallBigSites - Main Interactive Script
  * Powers portfolio demos, quote calculator, mobile nav, and live modal viewers
  */
 
